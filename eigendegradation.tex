@@ -1,0 +1,522 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[applsci,journal,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
+
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal and change "submit" to "accept". The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
+
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% acoustics, actuators, addictions, admsci, adolescents, aerospace, agriculture, agriengineering, agronomy, ai, algorithms, allergies, analytica, animals, antibiotics, antibodies, antioxidants, appliedchem, applmech, applmicrobiol, applnano, applsci, arts, asi, atmosphere, atoms, audiolres, automation, axioms, batteries, bdcc, behavsci, beverages, biochem, bioengineering, biologics, biology, biomechanics, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, biosensors, biotech, birds, bloods, brainsci, buildings, businesses, cancers, carbon, cardiogenetics, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, civileng, cleantechnol, climate, clinpract, clockssleep, cmd, coatings, colloids, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, crops, cryptography, crystals, curroncol, cyber, dairy, data, dentistry, dermato, dermatopathology, designs, diabetology, diagnostics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecologies, econometrics, economies, education, ejihpe, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, entropy, environments, environsciproc, epidemiologia, epigenomes, fermentation, fibers, fire, fishes, fluids, foods, forecasting, forensicsci, forests, fractalfract, fuels, futureinternet, futuretransp, futurepharmacol, futurephys, galaxies, games, gases, gastroent, gastrointestdisord, gels, genealogy, genes, geographies, geohazards, geomatics, geosciences, geotechnics, geriatrics, hazardousmatters, healthcare, hearts, hemato, heritage, highthroughput, histories, horticulturae, humanities, hydrogen, hydrology, hygiene, idr, ijerph, ijfs, ijgi, ijms, ijns, ijtm, ijtpp, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jcdd, jcm, jcp, jcs, jdb, jfb, jfmk, jimaging, jintelligence, jlpea, jmmp, jmp, jmse, jne, jnt, jof, joitmc, jor, journalmedia, jox, jpm, jrfm, jsan, jtaer, jzbg, kidney, land, languages, laws, life, liquids, literature, livers, logistics, lubricants, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, metabolites, metals, metrology, micro, microarrays, microbiolres, micromachines, microorganisms, minerals, mining, modelling, molbank, molecules, mps, mti, nanoenergyadv, nanomanufacturing, nanomaterials, ncrna, network, neuroglia, neurolint, neurosci, nitrogen, notspecified, nri, nursrep, nutrients, obesities, oceans, ohbm, onco, oncopathology, optics, oral, organics, osteology, oxygen, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pharmaceuticals, pharmaceutics, pharmacy, philosophies, photochem, photonics, physchem, physics, physiolsci, plants, plasma, pollutants, polymers, polysaccharides, proceedings, processes, prosthesis, proteomes, psych, psychiatryint, publications, quantumrep, quaternary, qubs, radiation, reactions, recycling, regeneration, religions, remotesensing, reports, reprodmed, resources, risks, robotics, safety, sci, scipharm, sensors, separations, sexes, signals, sinusitis, smartcities, sna, societies, socsci, soilsystems, solids, sports, standards, stats, stresses, surfaces, surgeries, suschem, sustainability, symmetry, systems, taxonomy, technologies, telecom, textiles, thermo, tourismhosp, toxics, toxins, transplantology, traumas, tropicalmed, universe, urbansci, uro, vaccines, vehicles, vetsci, vibration, viruses, vision, water, wevj, women, world 
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, book, bookreview, briefreport, casereport, comment, commentary, communication, conferenceproceedings, correction, conferencereport, entry, expressionofconcern, extendedabstract, datadescriptor, editorial, essay, erratum, hypothesis, interestingimage, obituary, opinion, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, systematicreview, supfile, technicalnote, viewpoint, guidelines, registeredreport, tutorial
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. If eps figures are used, remove the option pdftex and use LaTeX and dvi2pdf.
+
+%=================================================================
+% MDPI internal commands
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2021}
+\copyrightyear{2021}
+%\externaleditor{Academic Editor: Firstname Lastname} % For journal Automation, please change Academic Editor to "Communicated by"
+\datereceived{} 
+\dateaccepted{} 
+\datepublished{} 
+\hreflink{https://doi.org/} % If needed use \linebreak
+%------------------------------------------------------------------
+% The following line should be uncommented if the LaTeX file is uploaded to arXiv.org
+%\pdfoutput=1
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, soul, multirow, microtype, tikz, totcount, changepage, paracol, attrib, upgreek, cleveref, amsthm, hyphenat, natbib, hyperref, footmisc, url, geometry, newfloat, caption
+
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{amsfonts}
+
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{supertabular}
+
+\usepackage{color}
+\usepackage{cancel}
+
+\newcommand{\etal}{
+  \textit{et al.}
+}
+
+\newcommand{\differential}[1]
+{\mathrm{d}#1}
+\newcommand{\trace}[0]
+{\mathrm{tr}}
+\newcommand{\matderi}[0]
+{\mathrm{D}}
+
+%=================================================================
+%% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Eigendegradation algorithm applied to visco-plastic weak layers}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Eigendegradation algorithm applied to visco-plastic weak layers}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-0482-378X} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-2677-3007} % Add \orcidB{} behind the author's name
+\newcommand{\orcidauthorC}{0000-0002-3290-9433} % Add \orcidC{} behind the author's name
+\newcommand{\orcidauthorD}{0000-0001-7591-418X} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorE}{0000-0002-6087-3255} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Pedro Navas $^{1}$ %,\dagger,\ddagger}$
+\orcidA{}, Susana L\'opez-Querol $^{2}$\orcidB{}*, Diego Manzanal$^{1}$\orcidE{}, Angel Yag\"ue$^{1}$\orcidC{} and Miguel Mart\'in Stickle $^{1}$\orcidD{}}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Pedro Navas, Susana L\'opez-Querol, Diego Manzanal, Angel Yag\"ue and Miguel Mart\'in Stickle }
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{Navas, P., L\'opez-Querol, S., Manzanal, D., Yag\"ue, A. and Stickle, M.M.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Universidad Polit\'ecnica de Madrid. ETSI Caminos, Canales y Puertos. Prof. Aranguren 3, Madrid.\\
+$^{2}$ \quad Department of Civil, Environmental and Geomatic Engineering, University College London, Gower Street, London WC1E 6BT, UK}
+
+% Contact information of the corresponding author
+\corres{Correspondence: s.lopez-querol@ucl.ac.uk}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation 3} 
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{XXXXXX}
+
+% Keywords
+\keyword{Meshfree numerical modeling; Finite deformation; Degradation; Sensitive Clays; Visco-Plastic behavior} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences:
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data:
+%\dataset{DOI number or link to the deposited data set in cases where the data set is published or set to be published separately. If the data set is submitted and will be published as a supplement to this paper in the journal Data, this field will be filled by the editors of the journal. In this case, please make sure to submit the data set as a supplement when entering your manuscript into our manuscript editorial system.}
+
+%\datasetlicense{license under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{Instead of the abstract}
+%\entrylink{The Link to this entry published on the encyclopedia platform.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Constitutive model}
+
+
+\subsection{Rate dependent plasticity}
+Along with the mathematical and numerical models described so far, it is essential to choose an appropriate constitutive model for the materials. It has been studied how clays suffer a viscous phenomena and delayed deformation due to creep behavior.
+The concept of the viscoplastic model described in this section and used in the further simulations is based on Perzyna’s theory (1966-CITA). Perzyna’s theory is a modification of classical plasticity wherein viscous-like behavior is introduced by a time-rate flow rule employing a plasticity yield function. Similar to the rate-independent theory the strain rate is decomposed into an elastic and a viscoplastic strain rate:
+
+\begin{equation}
+\dot{\boldsymbol{\varepsilon}}=\dot{\boldsymbol{\varepsilon}}^{\mathrm{e}}+\dot{\boldsymbol{\varepsilon}}^{\mathrm{vp}}
+\end{equation}
+
+The stress rate tensor $\boldsymbol{\dot{\sigma}}$ is related to the elastic strain rate via a constitutive tensor $\boldsymbol{D}_{e}$, which is constant in the case of linear elasticity and variable (stress dependent) in the case of hypo or hyperelasticity:
+
+\begin{equation}
+\dot{\sigma}=\mathbf{D}_{e}\left(\dot{\varepsilon}-\dot{\varepsilon}^{v p}\right)
+\end{equation}
+
+In the theory proposed by Perzyna (1966-CITA), the viscoplastic strain rate is defined in a similar fashion as in the rate independent plasticity theory:
+
+\begin{equation}
+\dot{\boldsymbol{\varepsilon}}^{\mathrm{vp}}=\gamma\langle\phi(f)\rangle \frac{\partial g}{\partial \boldsymbol{\sigma}}
+\end{equation}
+
+where $\gamma$ is the fluidity parameter (which is the reciprocal of viscosity). $\langle\phi(f)\rangle$ is the viscous flow function, which represents the current magnitude of viscoplastic strain rate. $g$ denotes the viscoplastic potential function and $f$ any valid plasticity function playing the role of loading surface. A von-Mises yield surface, with a degradation curve for the undrained shear strength, has been adopted for the failure criteria. Associative flow is invoked by $f=g . \frac{\partial g}{\partial \sigma}$ represents the current direction of the viscoplastic strain rate. The viscous flow function is defined by:
+
+\begin{equation}
+\langle\phi(f)\rangle=\left\{\begin{array}{cl}\phi(f) & , f>0 \\ 0 & , f \leq 0\end{array}\right. ,
+\end{equation}
+
+where $<>$ denotes Macauley brackets. A choice for the function $\phi$ is:
+
+\begin{equation}
+\phi=\left(\frac{f-f_{\mathrm{o}}}{f_{\mathrm{o}}}\right)^{\alpha}
+\end{equation}
+
+in which $\alpha$ is a material constant. Concerning algorithm aspects, in displacement-based finite element formulations, stress updates take place at the Gauss points for a known nodal displacement. We start from time $t_{n}$ with the known converged state: 
+
+\begin{equation}
+\left[\varepsilon_{n}, \varepsilon_{n}^{v p}, \sigma_{n}, \kappa_{n}\right]
+\end{equation}
+
+(namely total strain, viscoplastic strain, stress and a scalar internal variable that characterizes the size of the loading surface for the purpose of introducing hardening or softening behavior) to calculate the corresponding values at time 
+
+\begin{equation}
+t_{n+1}=t_{n}+\Delta t:\left[\varepsilon_{n+1}, \varepsilon_{n+1}^{v p}, \sigma_{n+1}, \kappa_{n+1}\right].
+\end{equation}
+
+In this incremental process, from Eqs.~\ref{eq:01} and~\ref{eq:02}:
+
+\begin{eqnarray}
+\Delta \varepsilon &=& \varepsilon^{\mathrm{e}}+\Delta \varepsilon^{\mathrm{vp}} \\
+\Delta \boldsymbol{\sigma} &=& \mathbf{D}_{\mathrm{e}}\left(\Delta \varepsilon-\Delta \boldsymbol{\varepsilon}^{\mathrm{vp}}\right)
+\end{eqnarray}
+
+
+Therefore the key feature of the stress updates is characterized by estimating the incremental viscoplatic strain $\Delta \varepsilon^{v p}.$ Details of the numerical implementation can be found in the textbooks (Owen and Hinton 1986 CITA; De Souza Neto et al. 2008 - CITA ). It has to be noticed also that for softening problems the viscoplasticity approach has a regularizing effect in the sense that the initial-value problem remains well-posed avoiding instability due to strain and strain-rate softening (Wang et al. 1997-CITA).
+
+
+\subsection{Eigenerosion and Eigensoftening algorithms}
+
+Within the context of OTM formulation, fracture can be modeled simply by eroding material points according to an energy-release criterion or stress criterion depending if eigenerosion~\cite{schmidt09, Pandolfi_12, Li_12, Pandolfi_13} or eigensoftening~\cite{Navas2018b,Molinos2020b} algorithm is adopted respectively. In both methodologies, when the material points are failed, they are neglected from the computation of stresses in the model, which approximates the presence of cracks. However, the way to reach the zero stiffness state is different for each model: meanwhile in the eigenerosion the failure is instantaneous, in the eigensoftening the material follows a softening curve which depends on the material. It needs to be pointed out that when a material point satisfies the erosion condition, its contribution to the internal force vector and to the material stiffness matrix is set to zero, but its contribution to the mass matrix is maintained. The mass of a material point is discarded only when an eroded material point is not connected to any nodes.
+
+Next we compute the energy-release rate attendant to the failure of material point $p$, the starting point of the aforementioned methodologies:
+\begin{eqnarray}
+G_{p,k+1}&=&\frac{C\epsilon}{m_{p,k+1}}\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_qW_k(F_{q,k+1}), \nonumber\\
+m_{p,k+1}&=&\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q\label{eq10},
+\end{eqnarray}
+where $B_\epsilon (x_{p,k+1})$ is the sphere of radius $\epsilon$ centered at $x_{p,k+1}$ known as the $\epsilon$-neighborhood of the material point, $m_{p,k+1}$ is the mass of the neighborhood at loading step $k+1$, $W_k(F_{q,k+1})$ is the current free-energy density per unit mass at the material point $x_{q, k+1}$ and $C$ is a normalizing constant. 
+
+The material point is failed when $G_{p,k+1} $ surpasses a critical energy release rate that measures the material-specific energy, $G_F$, required to create a fracture surface of unit area. In calculations, the failed material-point set is updated at every time step according to  this criterion. For linear elasticity, Schmidt \textit{et al}.~\cite{schmidt09} have shown that this approximation converges to Griffith fracture in the limit of an infinitely fine discretization. 
+Indeed, erosion schemes that estimate the energy-release rate based on the energy of a single material point suffer from mesh-dependency and may overestimate the toughness of the material.
+
+A scheme of the configuration of the $\epsilon$-neighborhood is plotted in Fig.~\ref{fig3}.
+%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.44\textwidth]{Figs/eroded_neighbors_2.pdf}
+\caption{Scheme of a fractured layer (black dots) as set of failed material points, and of the $\epsilon$-neighborhood (inside the circle) of the material point located at the crack tip (grey dots).}
+\label{fig3}
+\end{figure}
+%%%%%%
+
+On the other hand, the implementation of the eigensoftening algorithm consists in adopting a strength criterion for crack initiation and a softening law which is proper to the material under study before the formation of a stress-free crack. This second process tends to accumulate less energy until the crack. When the maximum tensile strength, $f_t$, is reached, a cohesive crack is formed with zero opening displacement. Once the opening displacement, $w$, reaches a critical vale, $w_c$, a stress-free crack is attained. The energy below the softening curve represents the static fracture energy per unit of area, $G_F$, which is sketched in Fig.~\ref{fig_GF}.
+%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.44\textwidth]{Figs/GF.pdf}
+\caption{Scheme of a linear cohesive law, where the shade area is $G_F$, $f_t$ is the tensile strength,  and $w_c$  is the critical opening displacement.}
+\label{fig_GF}
+\end{figure}
+%%%%%%
+For the Eigensoftening calculation, Eq.~(\ref{eq10}) can be rewritten in terms of the principal stresses at time $t_{k+1}$, since this model employs the first principal stress as a failure criterion. Therefore, the variation of the averaged strain energy density in the $\epsilon$-neighborhood of the material point $x_{p, k+1}$ can be expressed as,
+%%%%
+\begin{equation}\label{eq_Wp_1}
+\delta W^\epsilon_{p} = \frac{\partial G_{p}}{C\epsilon} = \frac{1}{m_{p}}\sum_{x_{q}\in B_\epsilon (x_{p})} m_{q} \sigma_{q,1} \delta \varepsilon_q,
+\end{equation}
+%%%
+where $\sigma_{q, 1}$ is the maximum principal stress at a neighboring material point $x_{q, k+1}$. Considering an effective strain $\varepsilon_q$ at the material point $x_{q, k+1}$, such that the variation of the local strain energy can be obtained as $\delta W_q = \sigma_{q, 1}\delta \varepsilon_q$, let assume the effective strain increment of each material point can be approximated by its counterpart in the neighborhood, being Eq.~(\ref{eq_Wp_1}) simplified as:
+\begin{equation}\label{eq_Wp_3}
+\delta W^\epsilon_{p}=\frac{\delta \varepsilon_p} {m_{p}} \sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})} m_q \sigma_{q, 1}.
+\end{equation}
+Thus, the equivalent critical stress at the material point $x_{p, k+1}$ is defined as follows
+%%%%
+\begin{equation}\label{eq_sigmap}
+\sigma^{\epsilon}_{p}=\frac{1}{m_{p}}\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q \sigma_{q, 1}
+\end{equation}
+
+When $\sigma^{\epsilon}_{p,k+1}$ surpasses the tensile strength, $f_t$,  the softening behavior is activated through the damage variable $\chi$, which ranges between zero (an intact material) and one (completely failed material points). Of coarse, $\chi$ depends on the current and critical opening measures, $w$ and $w_c$ respectively.  The later is a material parameter but the first one has to be measured in terms of the achieved strain and a length of affection called band width, $h_\epsilon$, equivalent to the crack band model of Ba\v{z}ant~\cite{Bazant83}. It bears emphasis that  a reference value for $h^{\epsilon}$ is between two and four times the maximum size of the aggregates for concrete according to Ba\v{z}ant~\cite{Bazant98}. Thus, this is a material parameter more than a numerical artifact. The relationship between strain and crack opening depends on the effective fracture strain, $\varepsilon^{\epsilon}_f$, defined as the difference between the strain at crack initiation, $\varepsilon_1(x_{p,0})$, and the current strain, $ \varepsilon_1(x_{p,k+1})$ for a material point $p$; and the band width as:
+
+\begin{equation} \label{eq15}
+ \varepsilon_f^{\epsilon} = \varepsilon_1(x_{p,k+1}) - \varepsilon_1(x_{p,0})  =  \frac{w}{h^{\epsilon}}
+\end{equation}
+
+\subsection{Eigendegradation model}
+Following the work of Einav and Randolph (CITA), and the later implementations of .....(CITAS), the behavior of sensitive clays can be modeled by strain softening curves in order to reduce the strength of the material by a degradation obtained by accumulation of strain. Einav and Randolph assumed that the current shear strength depends on the accumulated absolute shear strain, $\xi$, which is taken as a state variable from which an isotropic strength reduction, $\delta(\xi)$, is calculated as
+
+\begin{equation} \label{eq16}
+\delta(\xi)=s_{u} / s_{u i}=\delta_{\mathrm{rem}}+\left(1-\delta_{\mathrm{rem}}\right) \mathrm{e}^{-3 \xi / \xi_{95}}
+\end{equation}
+where
+\begin{equation}\label{eq17}
+\xi=\int_{t}\left|\dot{\gamma}_{\max }\right| \mathrm{d} t
+\end{equation}
+
+and $\left|\dot{\gamma}_{\max }\right|$ is the cumulative absolute shear strain, $s_{u}$ and $s_{u i}$ are the softened strength and initial strength, respectively, $\delta_{\text {rem }}$ is the fully remoulded strength ratio, and $\xi_{95}$ is the cumulative shear strain required to cause $95 \%$ reduction (from peak to remoulded). The assumption is that $\delta_{\text {rem }}$ may be taken as the inverse of the sensitivity of the soil, while an appropriate value for $\xi_{95}$ must be deduced from laboratory test data, or by conducting cyclic penetration and extraction tests with T-bar or ball.
+
+The calculation of the cumulative shear strain can be achieved by the eigendeformation technique, departing from Eq.~\eqref{eq_Wp_1}, and considering, for the Eigendegradation calculation, that the stress remains constant in a neighborhood $\epsilon$. Thus, Eq.~\eqref{eq_Wp_1} can be simplified as
+
+\begin{equation}\label{eq_Wp_4}
+\delta W^\epsilon_{p}=\frac{\delta \tau_p} {m_{p}} \sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})} m_q \gamma_{q},
+\end{equation}
+
+being $\delta \tau_p$ the increment of tangential stress of the neighborhood and $\gamma^{\epsilon}_{p}$ the current local shear strain, calculated as:
+
+\begin{equation}\label{eq_Wp_5}
+\gamma^{\epsilon}_{p}=\frac{1}{m_{p}}\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q \gamma_{q}
+\end{equation}
+
+Similarly, in the neighborhood $\epsilon$, the non-local cumulative strain of a material point $p$ is calculated, only when plasticity is activated, as follows:
+\begin{equation}\label{eq18}
+\xi^{\epsilon}_{p}=\int^{t_{k+1}}_{t_{p0}}\left|\dot{\gamma^{\epsilon}_{p}}\right| \mathrm{d} t
+\end{equation}
+being $t_{k+1}$ referred to the current step and $t_{p0}$ to the step when plasticity begins. 
+
+Considering only shear failure, yield shear stress $\tau$ is equivalent to the softened strength, $s_u$, and the residual yield shear stress, $\tau_{95}$, can be reached by $\tau_{95}=\tau{rem}=s_{ui} \, \delta_{rem}$. Thus, in every state of degradation, the current yield shear stress, referred to the epsilon neighborhood, $\tau^{\epsilon}$, reads:
+
+\begin{equation} \label{eq19}
+\tau^{\epsilon}=\tau_{95}+\left(\tau_{i}-\tau_{95}\right) \mathrm{e}^{-3 \xi^{\epsilon}_{p} / \xi_{95}}
+\end{equation}
+
+It is remarkable that, in laboratory, parameter $\xi_{95}$ is not obtained. Instead, the displacement $\delta_{95}$ is achieves. In Fig.~\ref{fig_deg}.A) the degradation of the strength in terms of the displacement is plotted.
+%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.44\textwidth]{Figs/degradation.pdf}
+\caption{Degradation curve in terms of the displacement, A), and the shear strain, B).}
+\label{fig_deg}
+\end{figure}
+%%%
+ It can be seen how this law can be translated to the shear strain measurement (Fig.~\ref{fig_deg}.B) by multiplying by $\epsilon$, which, in this problem, is considered as the sliding length. Depending on the size of the soft layer, this parameter $\epsilon$ is obtained as the minimum length between the neighbor radius and the size of the soft layer (See Fig.~\ref{fig_layer}) as follows:
+ \begin{equation} \label{eq20}
+2\epsilon = \min(h_s,2C_\epsilon h)
+\end{equation}
+%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.44\textwidth]{Figs/soft_layer.pdf}
+\caption{Scheme of the measurements of the soft layer (black dots) and the $\epsilon$-neighborhood around material point P.}
+\label{fig_layer}
+\end{figure}
+\subsection{Visco-Plastic Eigendegradation algorithm}
+Following, the pseudo-algorithm for the Eigendegradation model within a visco-plastic yield surface will be presented. It is worth mentioning that prior to the algorithm steps, we need to calculate the equivalent shear total strain of every material point as the norm of the deviatoric total strain tensor. Since large strain is considered, the strain tensor is obtained through the logarithm of the left Cauchy-Green strain tensor, $\mathbf{b}$:
+
+\begin{equation}\label{eq21}
+\boldsymbol{\varepsilon}=\frac{1}{2}\log\boldsymbol{b}=\frac{1}{2}\log\boldsymbol{F F^T}.
+\end{equation}
+
+
+\begin{algorithm}[ht]
+\caption{Visco-Plastic Eigendegradation algorithm}\label{alg1}
+\begin{algorithmic}
+\State \textbf{1. Calculation of the small strain tensor}
+$$
+\boldsymbol{\varepsilon}^{e\; trial}_{k+1}=\frac{1}{2}\,\log\mathbf{b}^{e\; trial}_{k+1}
+$$
+\State
+\textbf{2. Elastic Predictor: volumetric and deviatoric stress measurements}
+\begin{center}
+Volumetric:  $p^{trial}_{k+1}=K \left(\varepsilon^{e}_{vol}\right)^{trial}_{k+1}$\\
+Deviatoric:  $
+\mathbf{s}^{trial}_{k+1}=2G\,\left(\boldsymbol{\varepsilon}^{e}_{dev}\right)^{trial}_{k+1}
+$\\
+\vspace{0.3cm}
+being: $
+\mathbf{\sigma}^{trial}_{k+1}=J^{-1}\mathbf{\tau}^{trial}_{k+1}
+$\\
+\vspace{0.3cm}
+and:
+$q^{trial}_{k+1}=\sqrt{\frac{3}{2}} \Vert \mathbf{s}^{trial}_{k+1} \Vert$
+\vspace{0.15cm}
+\end{center}
+\textbf{3. Eigendegradation calculation}:\\
+\IF {$t < t_{p0}$}\\
+$\sigma_y=\tau_i$
+\ELSE
+\begin{itemize}
+\item
+$
+m_{p}=\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q
+$
+\vspace{0.15cm}
+\item
+$
+\gamma^{\epsilon}_{p}=\frac{1}{m_{p}}\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q \gamma_{q}
+$
+\vspace{0.15cm}
+\item
+$
+\xi^{\epsilon}_{p}=\sum^{k+1}_{k(t_{p0})} \left|\Delta\gamma^{\epsilon}(x_{p,k})\right| 
+$
+\vspace{0.15cm}
+\item
+$
+\sigma_y=\tau_{95}+\left(\tau_{i}-\tau_{95}\right) \mathrm{e}^{-3 \xi^{\epsilon}_{p} / \xi_{95}}
+$
+\vspace{0.15cm}
+\item Hardening modulus:
+$$
+H=\frac{\partial \sigma_y}{\partial\overline{\varepsilon}^p} \simeq \frac{\partial \sigma_y}{\partial \xi^{\epsilon}_{p}} = -\frac{3\left(\tau_{i}-\tau_{95}\right)}{\xi_{95}} \mathrm{e}^{-3 \xi^{\epsilon}_{p} / \xi_{95}}
+$$
+\end{itemize}
+\ENDIF
+\\
+\vspace{0.3cm}
+\textbf{4. Yield condition}: $\Delta\lambda=0$\\
+\IF {$\phi= \frac{q^{trial}_{k+1} -\sigma_y}{\sigma_y} \leq 0$} Elastic region:\\
+\vspace{0.15cm}
+$\mathbf{\sigma}_{k+1}=\mathbf{\sigma}^{trial}_{k+1}$
+\vspace{0.3cm}
+\ELSE   Viscoplastic flow:
+\begin{itemize}
+\item\textbf{4.1} Derivative of the yield surface:
+\begin{eqnarray}
+d&=&\frac{\partial\phi}{\partial\Delta\lambda}=\nonumber\\
+&=&- \frac{3G}{\sigma_y} - H \frac{q^{trial}_{k+1}  - 3G\Delta\lambda}{\sigma^2_y} - \frac{1}{\alpha\gamma\Delta t}\left( \frac{\Delta \lambda}{\gamma \Delta  t} \right)^{\frac{1}{\alpha}-1}\nonumber
+\end{eqnarray}
+\item\textbf{4.2} Increment of plastic strain:
+$
+\Delta\lambda=\Delta\lambda-\frac{\phi}{d}
+$
+\item\textbf{4.3} Yield function:
+$$
+\phi= \frac{q^{trial}_{k+1}  - 3G\Delta\lambda}{\sigma_y} -\left[  1 + \left( \frac{\Delta \lambda}{\gamma \Delta  t} \right)^{1/\alpha} \right]
+$$
+\item\textbf{4.4} If $\phi < tolerance$ go to \textbf{4.5}, else go to  \textbf{4.1}
+\item\textbf{4.5} Update
+$$
+\overline{\varepsilon}^p_{k+1}=\overline{\varepsilon}^p_{k}+\Delta\gamma
+$$
+$$
+\Delta\boldsymbol{\varepsilon}_{k+1}^{p}= \frac{\Delta\gamma}{\|\textbf{s}^{trial}_{k+1}\|}\mathbf{s}^{trial}_{k+1}
+$$
+$$
+\sigma_{k+1}=\left(p^{trial}_{k+1} \right)\mathbf{I}+\left(1-\frac{3G\Delta\gamma}{q^{trial}_{k+1} }\right)\textbf{s}^{trial}_{k+1}
+$$
+\end{itemize}
+\ENDIF
+%\algstore{myalg}
+%\end{algorithmic}
+%\end{algorithm}
+%
+%\begin{algorithm}
+%\begin{algorithmic}
+%\algrestore{myalg}
+\State \textbf{5. Update elastic left Cauchy-Green Tensor}
+$$
+\boldsymbol{\varepsilon}_{k+1}^{e}= \boldsymbol{\varepsilon}^{e\; trial}_{k+1}-\Delta\boldsymbol{\varepsilon}_{k+1}^{p}
+$$
+$$
+\mathbf{b}_{k+1}^{e}=\exp (2 \boldsymbol{\varepsilon}_{k+1}^{e})
+$$
+\end{algorithmic}
+\end{algorithm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Computational tools}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Applications}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. The following statements should be used ``Conceptualization, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing---original draft preparation, X.X.; writing---review and editing, X.X.; visualization, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y. All authors have read and agreed to the published version of the manuscript.'', please turn to the  \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work~reported.}
+
+\funding{Please add: ``This research received no external funding'' or ``This research was funded by NAME OF FUNDER grant number XXX.'' and  and ``The APC was funded by XXX''. Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.}
+
+\institutionalreview{In this section, please add the Institutional Review Board Statement and approval number for studies involving humans or animals. Please note that the Editorial Office might ask you for further information. Please add ``The study was conducted according to the guidelines of the Declaration of Helsinki, and approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).'' OR ``Ethical review and approval were waived for this study, due to REASON (please provide a detailed justification).'' OR ``Not applicable'' for studies not involving humans or animals. You might also choose to exclude this statement if the study did not involve humans or animals.}
+
+\acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g., materials used for experiments).}
+
+\conflictsofinterest{The authors declare no conflict of interest.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\abbreviations{The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+MDPI & Multidisciplinary Digital Publishing Institute\\
+DOAJ & Directory of open access journals\\
+TLA & Three letter acronym\\
+LD & Linear dichroism
+\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+
+\reftitle{References}
+
+% Please provide either the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+\externalbibliography{yes}
+\bibliography{lib2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
