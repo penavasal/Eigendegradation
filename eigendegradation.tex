@@ -64,6 +64,9 @@
 \usepackage{amsbsy}
 \usepackage{mathrsfs} % para formato de letra
 \usepackage{amsfonts}
+%\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{algcompatible}
 
 \usepackage{epsfig}
 \usepackage{subfigure}
@@ -463,7 +466,37 @@ $$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Applications}
+\subsection{Shear test}
+\subsection{Strip footing load}
+\subsection{Vertical cut}
+This final application allows to understand the potentiality of the proposed methodology. A weak layer is supposed in a soil with a vertical cut on the left side. This weak layer is located forming a 45$^\circ$ angle, as it is sketched in Fig.~\ref{fig_VC1}. This layer, whose thick is 1 meter, will be considered plastic. Von Mises yield surface is employed, being its degradation modeled through both \emph{Eigendegradation} and traditional softening in order to assess the performance of the first one. Out of the weak layer, the soil is considered elastic since its failure is far from the failure of the weak layer. The soil can be considered infinite on the right and on the bottom of the model.
 
+%%%
+\begin{figure}
+%\centering
+\includegraphics[width=0.7\textwidth]{Figs/geo_VC.pdf}
+\caption{Geometry of the vertical cut analyzed through \emph{Eigendegradation} and softening models and the location of the weak layer and the loaded zone. (Units in meters)}
+\label{fig_VC1}
+\end{figure}
+%%%
+
+The top left part is loaded by a surface load as it is shown in Fig.~\ref{fig_VC1}. This load is composed by two different waves, as it is sketched in Fig.~\ref{fig_VC2}.
+
+%%%
+\begin{figure}
+%\centering
+\includegraphics[width=0.7\textwidth]{Figs/carga_VC.pdf}
+\caption{Scheme of the load and the yield strength along the time.}
+\label{fig_VC2}
+\end{figure}
+%%%
+
+Both waves follow the expression:
+$$
+q_\alpha(t)=A_{\alpha}\cdot\left[1-cos(\omega_{\alpha}t)\right]
+$$
+
+where $\alpha$ varies for each of both loads. The bigger load is the one that provokes the triggering of the plastic mechanism. It can be considered as a abnormal scenario that may lead to catastrophic consequences in the short or in the long time. Its parameters are
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
@@ -474,11 +507,9 @@ $$
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. The following statements should be used ``Conceptualization, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing---original draft preparation, X.X.; writing---review and editing, X.X.; visualization, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y. All authors have read and agreed to the published version of the manuscript.'', please turn to the  \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work~reported.}
+\authorcontributions{Conceptualization, S. L\'opez-Querol. and D. Manzanal; software and validation, P.Navas; resources, A. Yag\"ue; supervision, M.Mart\'in-Stickle. All authors have read and agreed to the published version of the manuscript.}
 
 \funding{Please add: ``This research received no external funding'' or ``This research was funded by NAME OF FUNDER grant number XXX.'' and  and ``The APC was funded by XXX''. Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.}
-
-\institutionalreview{In this section, please add the Institutional Review Board Statement and approval number for studies involving humans or animals. Please note that the Editorial Office might ask you for further information. Please add ``The study was conducted according to the guidelines of the Declaration of Helsinki, and approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).'' OR ``Ethical review and approval were waived for this study, due to REASON (please provide a detailed justification).'' OR ``Not applicable'' for studies not involving humans or animals. You might also choose to exclude this statement if the study did not involve humans or animals.}
 
 \acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g., materials used for experiments).}
 
@@ -490,10 +521,9 @@ $$
 
 \noindent 
 \begin{tabular}{@{}ll}
-MDPI & Multidisciplinary Digital Publishing Institute\\
-DOAJ & Directory of open access journals\\
-TLA & Three letter acronym\\
-LD & Linear dichroism
+OTM & Optimal Transportation Meshfree\\
+SPG & Smooth Particle Hydrodynamics\\
+MPM & Material Point Method
 \end{tabular}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -518,5 +548,6 @@ LD & Linear dichroism
 %Reviewer 3 comments and authors’ response
 %}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{paracol}
 \end{document}
 
