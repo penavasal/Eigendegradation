@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.19)  9 JUL 2021 13:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.19)  9 JUL 2021 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1514,7 +1514,7 @@ Package pdftex.def Info: Figs/soft_layer.pdf  used on input line 346.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 359.
 
-LaTeX Warning: Float too large for page by 161.67906pt on input line 462.
+LaTeX Warning: Float too large for page by 38.43083pt on input line 458.
 
 
 
@@ -1523,7 +1523,7 @@ usion: found PDF version <1.6>, but at most version <1.5> allowed
 <Figs/geo_VC.pdf, id=79, 412.93974pt x 413.42253pt>
 File: Figs/geo_VC.pdf Graphic file (type pdf)
 <use Figs/geo_VC.pdf>
-Package pdftex.def Info: Figs/geo_VC.pdf  used on input line 477.
+Package pdftex.def Info: Figs/geo_VC.pdf  used on input line 473.
 (pdftex.def)             Requested size: 367.66473pt x 368.08998pt.
 
 
@@ -1532,10 +1532,10 @@ clusion: found PDF version <1.6>, but at most version <1.5> allowed
 <Figs/carga_VC.pdf, id=82, 661.29358pt x 432.71562pt>
 File: Figs/carga_VC.pdf Graphic file (type pdf)
 <use Figs/carga_VC.pdf>
-Package pdftex.def Info: Figs/carga_VC.pdf  used on input line 488.
+Package pdftex.def Info: Figs/carga_VC.pdf  used on input line 484.
 (pdftex.def)             Requested size: 367.66473pt x 240.58258pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--527
+Underfull \hbox (badness 10000) in paragraph at lines 523--523
 
  []
 
@@ -1564,11 +1564,11 @@ AED: lastpage setting LastPage
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 552.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 552.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 548.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 548.
 (./eigendegradation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 552.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 552.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 548.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 548.
 Package rerunfilecheck Info: File `eigendegradation.out' has not changed.
 (rerunfilecheck)             Checksum: 34982AABFDDA6E24C5F27BDC8AA975B1;1852.
 
@@ -1577,33 +1577,34 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 29670 strings out of 480608
- 507827 string characters out of 5903630
- 866438 words of memory out of 5000000
+ 29672 strings out of 480608
+ 507838 string characters out of 5903630
+ 865414 words of memory out of 5000000
  44705 multiletter control sequences out of 15000+600000
- 607348 words of font info for 285 fonts, out of 8000000 for 9000
+ 607885 words of font info for 287 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,13n,64p,3670b,1149s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
 live/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></usr/local
 /texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2020/texmf-dist/fon
-ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
-1/urw/palatino/uplri8a.pfb>
-Output written on eigendegradation.pdf (9 pages, 1784462 bytes).
+local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2020/texmf-dist/font
+s/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
+/urw/palatino/uplri8a.pfb>
+Output written on eigendegradation.pdf (9 pages, 1791701 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 290 compressed objects within 3 object streams
+ 389 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
  51 named destinations out of 1000 (max. 500000)
  49813 words of extra memory for PDF output out of 51595 (max. 10000000)
 

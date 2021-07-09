@@ -341,7 +341,7 @@ It is remarkable that, in laboratory, parameter $\xi_{95}$ is not obtained. Inst
 2\epsilon = \min(h_s,2C_\epsilon h)
 \end{equation}
 %%%
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=0.44\textwidth]{Figs/soft_layer.pdf}
 \caption{Scheme of the measurements of the soft layer (black dots) and the $\epsilon$-neighborhood around material point P.}
@@ -354,13 +354,13 @@ Following, the pseudo-algorithm for the Eigendegradation model within a visco-pl
 \boldsymbol{\varepsilon}=\frac{1}{2}\log\boldsymbol{b}=\frac{1}{2}\log\boldsymbol{F F^T}.
 \end{equation}
 
-\clearpage
-\begin{algorithm}
+
+\begin{algorithm}[ht]
 \caption{Visco-Plastic Eigendegradation algorithm}\label{alg1}
 \begin{algorithmic}
 \State \textbf{1. Calculation of the small strain tensor}
 $$
-\boldsymbol{\varepsilon}^{e\; trial}_{k+1}=\frac{1}{2}\,\log\mathbf{b}^{e\; trial}_{k+1}
+\boldsymbol{\varepsilon}^{e\; trial}_{k+1}=1/2\,\log\mathbf{b}^{e\; trial}_{k+1}
 $$
 \State
 \textbf{2. Elastic Predictor: volumetric and deviatoric stress measurements}
@@ -371,16 +371,15 @@ Deviatoric:  $
 $\\
 \vspace{0.3cm}
 being: $
-\mathbf{\sigma}^{trial}_{k+1}=J^{-1}\mathbf{\tau}^{trial}_{k+1}
+\boldsymbol{\sigma}^{trial}_{k+1}=J^{-1}\boldsymbol{\tau}^{trial}_{k+1}
 $\\
 \vspace{0.3cm}
 and:
-$q^{trial}_{k+1}=\sqrt{\frac{3}{2}} \Vert \mathbf{s}^{trial}_{k+1} \Vert$
+$q^{trial}_{k+1}=\sqrt{\frac{3}{2}} \Vert \boldsymbol{s}^{trial}_{k+1} \Vert$
 \vspace{0.15cm}
 \end{center}
 \textbf{3. Eigendegradation calculation}:\\
-\IF {$t < t_{p0}$}\\
-$\sigma_y=\tau_i$
+\IF {$t < t_{p0}$} $\qquad \sigma_y=\tau_i$
 \ELSE
 \begin{itemize}
 \item
@@ -404,33 +403,30 @@ $
 $
 \vspace{0.15cm}
 \item Hardening modulus:
-$$
-H=\frac{\partial \sigma_y}{\partial\overline{\varepsilon}^p} \simeq \frac{\partial \sigma_y}{\partial \xi^{\epsilon}_{p}} = -\frac{3\left(\tau_{i}-\tau_{95}\right)}{\xi_{95}} \mathrm{e}^{-3 \xi^{\epsilon}_{p} / \xi_{95}}
-$$
+$
+\qquad H=\frac{\partial \sigma_y}{\partial\overline{\varepsilon}^p} \simeq \frac{\partial \sigma_y}{\partial \xi^{\epsilon}_{p}} = -\frac{3\left(\tau_{i}-\tau_{95}\right)}{\xi_{95}} \mathrm{e}^{-3 \xi^{\epsilon}_{p} / \xi_{95}}
+$
 \end{itemize}
 \ENDIF
 \\
 \vspace{0.3cm}
 \textbf{4. Yield condition}: $\Delta\lambda=0$\\
-\IF {$\phi= \frac{q^{trial}_{k+1} -\sigma_y}{\sigma_y} \leq 0$} Elastic region:\\
-\vspace{0.15cm}
-$\mathbf{\sigma}_{k+1}=\mathbf{\sigma}^{trial}_{k+1}$
+\IF {$\phi= q^{trial}_{k+1} -\sigma_y \leq 0$} Elastic region: $\quad \boldsymbol{\sigma}_{k+1}=\boldsymbol{\sigma}^{trial}_{k+1}$
 \vspace{0.3cm}
-\ELSE   Viscoplastic flow:
+\ELSE    $\quad$  Viscoplastic flow:
 \begin{itemize}
 \item\textbf{4.1} Derivative of the yield surface:
-\begin{eqnarray}
-d&=&\frac{\partial\phi}{\partial\Delta\lambda}=\nonumber\\
-&=&- \frac{3G}{\sigma_y} - H \frac{q^{trial}_{k+1}  - 3G\Delta\lambda}{\sigma^2_y} - \frac{1}{\alpha\gamma\Delta t}\left( \frac{\Delta \lambda}{\gamma \Delta  t} \right)^{\frac{1}{\alpha}-1}\nonumber
-\end{eqnarray}
+\begin{equation}
+d=\frac{\partial\phi}{\partial\Delta\lambda} = - \left( 3G  + \alpha \frac{q^{trial}_{k+1}  - 3G\Delta\lambda}{\Delta \lambda + \gamma\Delta t}\right) \left[  \frac{\gamma \Delta t}{\Delta \lambda+\gamma \Delta  t} \right]^{\alpha}  - H \nonumber
+\end{equation}
 \item\textbf{4.2} Increment of plastic strain:
 $
 \Delta\lambda=\Delta\lambda-\frac{\phi}{d}
-$
+$\vspace{0.3cm}
 \item\textbf{4.3} Yield function:
-$$
-\phi= \frac{q^{trial}_{k+1}  - 3G\Delta\lambda}{\sigma_y} -\left[  1 + \left( \frac{\Delta \lambda}{\gamma \Delta  t} \right)^{1/\alpha} \right]
-$$
+$
+\quad \phi= \left(q^{trial}_{k+1}  - 3G\Delta\lambda\right) \left[  \frac{\gamma \Delta t}{\Delta \lambda+\gamma \Delta  t} \right]^{\alpha} 
+$\vspace{0.3cm}
 \item\textbf{4.4} If $\phi < tolerance$ go to \textbf{4.5}, else go to  \textbf{4.1}
 \item\textbf{4.5} Update
 $$
@@ -440,10 +436,10 @@ $$
 \Delta\boldsymbol{\varepsilon}_{k+1}^{p}= \frac{\Delta\gamma}{\|\textbf{s}^{trial}_{k+1}\|}\mathbf{s}^{trial}_{k+1}
 $$
 $$
-\sigma_{k+1}=\left(p^{trial}_{k+1} \right)\mathbf{I}+\left(1-\frac{3G\Delta\gamma}{q^{trial}_{k+1} }\right)\textbf{s}^{trial}_{k+1}
+\boldsymbol{\sigma_{k+1}}=\left(p^{trial}_{k+1} \right)\mathbf{I}+\left(1-\frac{3G\Delta\gamma}{q^{trial}_{k+1} }\right)\textbf{s}^{trial}_{k+1}
 $$
 \end{itemize}
-\ENDIF
+\ENDIF\vspace{0.3cm}
 %\algstore{myalg}
 %\end{algorithmic}
 %\end{algorithm}
