@@ -10,11 +10,7 @@ Drucker, D.C.; Prager, W.
 Darve, F.; Laouafa, F.
 \newblock Instabilities in granular materials and application to landslides.
 \newblock {\em Mechanics of Cohesive-frictional Materials} {\bf 2000}, {\em
-  5},~627--652,
-  \href{http://xxx.lanl.gov/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/1099-1484%28200011%295%3A8%3C627%3A%3AAID-CFM109%3E3.0.CO%3B2-F}{{\normalfont
-  [https://onlinelibrary.wiley.com/doi/pdf/10.1002/1099-1484%28200011%295%3A8%3C627%3A%3AAID-CFM109%3E3.0.CO%3B2-F]}}.
-\newblock
-  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.1002/1099-1484(200011)5:8<627::AID-CFM109>3.0.CO;2-F}{\detokenize{https://doi.org/10.1002/1099-1484(200011)5:8<627::AID-CFM109>3.0.CO;2-F}}}.
+  5},~627--652.
 
 \bibitem[Pastor \em{et~al.}(2009)Pastor, Manzanal, Merodo, Mira, Blanc,
   Drempetic, Pastor, Haddad, and S{\'{a}}nchez]{Pastor2009b}
@@ -101,9 +97,8 @@ Dutto, P.; Stickle, M.; Pastor, M.; Manzanal, D.; Yague, A.; Tayyebi, S.M.;
   Yague, and Tayyebi]{Longo2019}
 Longo, A.; Pastor, M.; Sanavia, L.; Manzanal, D.; Stickle, M.M.; Lin, C.;
   Yague, A.; Tayyebi, S.M.
-\newblock A depth average {SPH} model
-  including$\less$b$\greater$$\less$i$\greater$$\upmu$$\less$/i$\greater$$\less$/b$\greater$($\less$i$\greater$I$\less$/i$\greater$)
-  rheology and crushing for rock avalanches.
+\newblock A depth average {SPH} model including $\mu(I)$ rheology and crushing
+  for rock avalanches.
 \newblock {\em International Journal for Numerical and Analytical Methods in
   Geomechanics} {\bf 2019}, {\em 43},~833--857.
 \newblock
@@ -204,11 +199,7 @@ Gutiérrez, M.A.; De~Borst, R.
 \newblock Numerical analysis of localization using a viscoplastic
   regularization: influence of stochastic material defects.
 \newblock {\em International Journal for Numerical Methods in Engineering} {\bf
-  1999}, {\em 44},~1823--1841,
-  \href{http://xxx.lanl.gov/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291097-0207%2819990430%2944%3A12%3C1823%3A%3AAID-NME564%3E3.0.CO%3B2-5}{{\normalfont
-  [https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291097-0207%2819990430%2944%3A12%3C1823%3A%3AAID-NME564%3E3.0.CO%3B2-5]}}.
-\newblock
-  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.1002/(SICI)1097-0207(19990430)44:12<1823::AID-NME564>3.0.CO;2-5}{\detokenize{https://doi.org/10.1002/(SICI)1097-0207(19990430)44:12<1823::AID-NME564>3.0.CO;2-5}}}.
+  1999}, {\em 44},~1823--1841.
 
 \bibitem[Bjerrum(1967)]{Bjerrum1967}
 Bjerrum, L.
@@ -241,7 +232,7 @@ Adachi, T.; Okano, M.
 \newblock A Constitutive Equation for Normally Consolidated Clay.
 \newblock {\em Soils and Foundations} {\bf 1974}, {\em 14},~69--73.
 \newblock
-  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.3208/sandf1972.14.4_55}{\detokenize{https://doi.org/10.3208/sandf1972.14.4_55}}}.
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.3208/sandf1972.14.4_55}{\detokenize{10.3208/sandf1972.14.4_55}}}.
 
 \bibitem[Heeres \em{et~al.}(2002)Heeres, Suiker, and {de Borst}]{HEERES20021}
 Heeres, O.M.; Suiker, A.S.; {de Borst}, R.

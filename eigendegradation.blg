@@ -10,30 +10,30 @@ Warning--empty title in Feda
 Warning--empty publisher in Manzanal2015
 You've used 58 entries,
             2862 wiz_defined-function locations,
-            1034 strings with 18250 characters,
-and the built_in function-call counts, 24036 in all, are:
-= -- 2034
+            1027 strings with 17428 characters,
+and the built_in function-call counts, 23984 in all, are:
+= -- 2028
 > -- 1363
 < -- 31
 + -- 518
 - -- 402
-* -- 2369
-:= -- 3808
-add.period$ -- 210
+* -- 2345
+:= -- 3802
+add.period$ -- 208
 call.type$ -- 58
 change.case$ -- 59
 chr.to.int$ -- 58
 cite$ -- 64
 duplicate$ -- 1071
-empty$ -- 1990
+empty$ -- 1988
 format.name$ -- 493
-if$ -- 4966
+if$ -- 4958
 int.to.chr$ -- 1
 int.to.str$ -- 58
 missing$ -- 61
-newline$ -- 329
+newline$ -- 327
 num.names$ -- 171
-pop$ -- 338
+pop$ -- 342
 preamble$ -- 0
 purify$ -- 58
 quote$ -- 0
@@ -48,5 +48,5 @@ type$ -- 391
 warning$ -- 5
 while$ -- 203
 width$ -- 0
-write$ -- 785
+write$ -- 779
 (There were 5 warnings)

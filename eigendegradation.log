@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.31)  13 JUL 2022 18:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.31)  13 JUL 2022 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1651,168 +1651,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 740--740
  []
 
 (./eigendegradation.bbl
-Runaway argument?
-{{\normalfont [https://onlinelibrary.wiley.com/doi/pdf/10.1002/1099-1\ETC.
-! Paragraph ended before \href@split was complete.
-<to be read again> 
-                   \par 
-l.18 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Undefined control sequence.
-<recently read> \less 
-                      
-l.105   including$\less
-                       $b$\greater$$\less$i$\greater$$\upmu$$\less$/i$\great...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \greater 
-                         
-l.105   including$\less$b$\greater
-                                  $$\less$i$\greater$$\upmu$$\less$/i$\great...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \less 
-                      
-l.105   including$\less$b$\greater$$\less
-                                         $i$\greater$$\upmu$$\less$/i$\great...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \greater 
-                         
-l.105 ...luding$\less$b$\greater$$\less$i$\greater
-                                                  $$\upmu$$\less$/i$\greater...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \less 
-                      
-l.105 ...$\greater$$\less$i$\greater$$\upmu$$\less
-                                                  $/i$\greater$$\less$/b$\gr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \greater 
-                         
-l.105 ...less$i$\greater$$\upmu$$\less$/i$\greater
-                                                  $$\less$/b$\greater$($\les...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \less 
-                      
-l.105 ...\greater$$\upmu$$\less$/i$\greater$$\less
-                                                  $/b$\greater$($\less$i$\gr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \greater 
-                         
-l.105 ...pmu$$\less$/i$\greater$$\less$/b$\greater
-                                                  $($\less$i$\greater$I$\les...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \less 
-                      
-l.105 ...ss$/i$\greater$$\less$/b$\greater$($\less
-                                                  $i$\greater$I$\less$/i$\gr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \greater 
-                         
-l.105 ...ter$$\less$/b$\greater$($\less$i$\greater
-                                                  $I$\less$/i$\greater$)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \less 
-                      
-l.105 ...ss$/b$\greater$($\less$i$\greater$I$\less
-                                                  $/i$\greater$)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \greater 
-                         
-l.105 ...er$($\less$i$\greater$I$\less$/i$\greater
-                                                  $)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Runaway argument?
-{{\normalfont [https://onlinelibrary.wiley.com/doi/pdf/10.1002/\newblock \ETC.
-! Paragraph ended before \href@split was complete.
-<to be read again> 
-                   \par 
-l.212 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-Underfull \hbox (badness 2418) in paragraph at lines 214--220
+Underfull \hbox (badness 2418) in paragraph at lines 205--211
 []\T1/ppl/m/n/9 (+20) Bjerrum, L.  En-gi-neer-ing Ge-ol-ogy of Nor-we-gian Norm
 ally-Consolidated Ma-rine
  []
 
-) 
-AED: lastpage setting LastPage
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 23.60004pt, for example:
@@ -1996,7 +1840,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
-[20]
+[20] 
+AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 24.18796pt, for example:
@@ -2005,79 +1850,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
 
-[21]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 24.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{24.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
-
-[22]
-
-! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{document}.
-
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.765 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 24.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{24.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-12.18796pt}.
-
-[23] (./eigendegradation.aux)
+[21] (./eigendegradation.aux)
 Package rerunfilecheck Info: File `eigendegradation.out' has not changed.
 (rerunfilecheck)             Checksum: 606D8F2A1D307E53781E4FF0415C5EB4;2336.
- )
-(\end occurred inside a group at level 2)
-
-### semi simple group (level 2) entered at line 1 (\begingroup)
-### semi simple group (level 1) entered at line 176 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 30222 strings out of 478994
- 522379 string characters out of 5858184
- 1092400 words of memory out of 5000000
- 46375 multiletter control sequences out of 15000+600000
- 494125 words of font info for 511 fonts, out of 8000000 for 9000
+ 30211 strings out of 478994
+ 522280 string characters out of 5858184
+ 1091837 words of memory out of 5000000
+ 46373 multiletter control sequences out of 15000+600000
+ 494267 words of font info for 507 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 126i,13n,130p,3670b,1314s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc
-}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regu
-lar.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbs
-y10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.
-pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on eigendegradation.pdf (23 pages, 3616115 bytes).
+ 126i,13n,130p,3670b,1178s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
+exlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/cm-super/sfss0500.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2021/texmf
+-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/urw/palatino/uplri8a.pfb>
+Output written on eigendegradation.pdf (21 pages, 3613031 bytes).
 PDF statistics:
- 978 PDF objects out of 1000 (max. 8388607)
- 762 compressed objects within 8 object streams
- 146 named destinations out of 1000 (max. 500000)
+ 964 PDF objects out of 1000 (max. 8388607)
+ 751 compressed objects within 8 object streams
+ 144 named destinations out of 1000 (max. 500000)
  109781 words of extra memory for PDF output out of 128383 (max. 10000000)
 
