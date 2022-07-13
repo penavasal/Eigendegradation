@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: eigendegradation.aux
+The style file: Definitions/mdpi.bst
+Database file #1: lib2020.bib
+Warning--there's a number but no volume in Zaba2011
+Warning--empty school in Desrues_1984
+Warning--empty author in Feda
+Warning--empty title in Feda
+Warning--empty publisher in Manzanal2015
+You've used 58 entries,
+            2862 wiz_defined-function locations,
+            1034 strings with 18250 characters,
+and the built_in function-call counts, 24036 in all, are:
+= -- 2034
+> -- 1363
+< -- 31
++ -- 518
+- -- 402
+* -- 2369
+:= -- 3808
+add.period$ -- 210
+call.type$ -- 58
+change.case$ -- 59
+chr.to.int$ -- 58
+cite$ -- 64
+duplicate$ -- 1071
+empty$ -- 1990
+format.name$ -- 493
+if$ -- 4966
+int.to.chr$ -- 1
+int.to.str$ -- 58
+missing$ -- 61
+newline$ -- 329
+num.names$ -- 171
+pop$ -- 338
+preamble$ -- 0
+purify$ -- 58
+quote$ -- 0
+skip$ -- 555
+stack$ -- 0
+substring$ -- 1325
+swap$ -- 255
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 391
+warning$ -- 5
+while$ -- 203
+width$ -- 0
+write$ -- 785
+(There were 5 warnings)

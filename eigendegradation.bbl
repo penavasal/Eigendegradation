@@ -1,0 +1,470 @@
+\begin{thebibliography}{999}
+
+\bibitem[Drucker and Prager(1952)]{Drucker-Prager}
+Drucker, D.C.; Prager, W.
+\newblock {Soil mechanics and plastic analysis for limit design.}
+\newblock {\em Quarterly of Applied Mathematics} {\bf 1952}, {\em
+  10(2)},~157--165.
+
+\bibitem[Darve and Laouafa(2000)]{DarveLaouafa2000}
+Darve, F.; Laouafa, F.
+\newblock Instabilities in granular materials and application to landslides.
+\newblock {\em Mechanics of Cohesive-frictional Materials} {\bf 2000}, {\em
+  5},~627--652,
+  \href{http://xxx.lanl.gov/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/1099-1484%28200011%295%3A8%3C627%3A%3AAID-CFM109%3E3.0.CO%3B2-F}{{\normalfont
+  [https://onlinelibrary.wiley.com/doi/pdf/10.1002/1099-1484%28200011%295%3A8%3C627%3A%3AAID-CFM109%3E3.0.CO%3B2-F]}}.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.1002/1099-1484(200011)5:8<627::AID-CFM109>3.0.CO;2-F}{\detokenize{https://doi.org/10.1002/1099-1484(200011)5:8<627::AID-CFM109>3.0.CO;2-F}}}.
+
+\bibitem[Pastor \em{et~al.}(2009)Pastor, Manzanal, Merodo, Mira, Blanc,
+  Drempetic, Pastor, Haddad, and S{\'{a}}nchez]{Pastor2009b}
+Pastor, M.; Manzanal, D.; Merodo, J.A.F.; Mira, P.; Blanc, T.; Drempetic, V.;
+  Pastor, M.J.; Haddad, B.; S{\'{a}}nchez, M.
+\newblock From solids to fluidized soils: diffuse failure mechanisms in
+  geostructures with applications to fast catastrophic landslides.
+\newblock {\em Granular Matter} {\bf 2009}, {\em 12},~211--228.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1007/s10035-009-0152-4}{\detokenize{10.1007/s10035-009-0152-4}}}.
+
+\bibitem[Ledesma \em{et~al.}(2021)Ledesma, Manzanal, and Sfriso]{Ledesma2021}
+Ledesma, O.; Manzanal, D.; Sfriso, A.
+\newblock Formulation and numerical implementation of a state parameter-based
+  generalized plasticity model for mine tailings.
+\newblock {\em Computers and Geotechnics} {\bf 2021}, {\em 135},~104158.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.compgeo.2021.104158}{\detokenize{10.1016/j.compgeo.2021.104158}}}.
+
+\bibitem[Ledesma \em{et~al.}(2022)Ledesma, Sfriso, and Manzanal]{Ledesma2022}
+Ledesma, O.; Sfriso, A.; Manzanal, D.
+\newblock Procedure for assessing the liquefaction vulnerability of tailings
+  dams.
+\newblock {\em Computers and Geotechnics} {\bf 2022}, {\em 144},~104632.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.compgeo.2022.104632}{\detokenize{10.1016/j.compgeo.2022.104632}}}.
+
+\bibitem[Laouafa and Darve(2002)]{Laouafa2002}
+Laouafa, F.; Darve, F.
+\newblock Modelling of slope failure by a material instability mechanism.
+\newblock {\em Computers and Geotechnics} {\bf 2002}, {\em 29},~301--325.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/s0266-352x(01)00030-1}{\detokenize{10.1016/s0266-352x(01)00030-1}}}.
+
+\bibitem[{Fern{\'{a}}ndez Merodo} \em{et~al.}(2004){Fern{\'{a}}ndez Merodo},
+  Pastor, Mira, Tonni, Herreros, Gonzalez, Tamagnini, Merodo, Pastor, Mira,
+  Tonni, Herreros, Gonzalez, and Tamagnini]{FernandezMerodo2004}
+{Fern{\'{a}}ndez Merodo}, J.A.; Pastor, M.; Mira, P.; Tonni, L.; Herreros,
+  M.I.; Gonzalez, E.; Tamagnini, R.; Merodo, J.A.F.; Pastor, M.; Mira, P.;
+  Tonni, L.; Herreros, M.I.; Gonzalez, E.; Tamagnini, R.
+\newblock {Modelling of diffuse failure mechanisms of catastrophic landslides}.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering} {\bf
+  2004}, {\em 193},~2911--2939.
+
+\bibitem[L{\'{o}}pez-Querol and Bl{\'{a}}zquez(2006)]{LopezQuerolB2006}
+L{\'{o}}pez-Querol, S.; Bl{\'{a}}zquez, R.
+\newblock {Liquefaction and cyclic mobility model in saturated granular media}.
+\newblock {\em International Journal for Numerical and Analytical Methods in
+  Geomechanics} {\bf 2006}, {\em 30},~413--439.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nag.488}{\detokenize{10.1002/nag.488}}}.
+
+\bibitem[Manzanal \em{et~al.}(2021)Manzanal, Bertelli, Lopez-Querol, Rossetto,
+  and Mira]{Manzanal2021}
+Manzanal, D.; Bertelli, S.; Lopez-Querol, S.; Rossetto, T.; Mira, P.
+\newblock Influence of fines content on liquefaction from a critical state
+  framework: the Christchurch earthquake case study.
+\newblock {\em Bulletin of Engineering Geology and the Environment} {\bf 2021},
+  {\em 80},~4871--4889.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1007/s10064-021-02217-2}{\detokenize{10.1007/s10064-021-02217-2}}}.
+
+\bibitem[Manzanal \em{et~al.}(2016)Manzanal, Drempetic, Haddad, Pastor,
+  Stickle, and Mira]{Manzanal2016}
+Manzanal, D.; Drempetic, V.; Haddad, B.; Pastor, M.; Stickle, M.M.; Mira, P.
+\newblock Application of a New Rheological Model to Rock Avalanches: An {SPH}
+  Approach.
+\newblock {\em Rock Mechanics and Rock Engineering} {\bf 2016}, {\em
+  49},~2353--2372.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1007/s00603-015-0909-5}{\detokenize{10.1007/s00603-015-0909-5}}}.
+
+\bibitem[Dutto \em{et~al.}(2017)Dutto, Stickle, Pastor, Manzanal, Yague,
+  Tayyebi, Lin, and Elizalde]{Dutto2017}
+Dutto, P.; Stickle, M.; Pastor, M.; Manzanal, D.; Yague, A.; Tayyebi, S.M.;
+  Lin, C.; Elizalde, M.
+\newblock Modelling of Fluidised Geomaterials: The Case of the Aberfan and the
+  Gypsum Tailings Impoundment Flowslides.
+\newblock {\em Materials} {\bf 2017}, {\em 10},~562.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.3390/ma10050562}{\detokenize{10.3390/ma10050562}}}.
+
+\bibitem[Longo \em{et~al.}(2019)Longo, Pastor, Sanavia, Manzanal, Stickle, Lin,
+  Yague, and Tayyebi]{Longo2019}
+Longo, A.; Pastor, M.; Sanavia, L.; Manzanal, D.; Stickle, M.M.; Lin, C.;
+  Yague, A.; Tayyebi, S.M.
+\newblock A depth average {SPH} model
+  including$\less$b$\greater$$\less$i$\greater$$\upmu$$\less$/i$\greater$$\less$/b$\greater$($\less$i$\greater$I$\less$/i$\greater$)
+  rheology and crushing for rock avalanches.
+\newblock {\em International Journal for Numerical and Analytical Methods in
+  Geomechanics} {\bf 2019}, {\em 43},~833--857.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nag.2912}{\detokenize{10.1002/nag.2912}}}.
+
+\bibitem[Lin \em{et~al.}(2019)Lin, Pastor, Yague, Tayyebi, Stickle, Manzanal,
+  Li, and Liu]{Lin2019}
+Lin, C.; Pastor, M.; Yague, A.; Tayyebi, S.M.; Stickle, M.M.; Manzanal, D.; Li,
+  T.; Liu, X.
+\newblock A depth-integrated {SPH} model for debris floods: application to Lo
+  Wai (Hong Kong) debris flood of August 2005.
+\newblock {\em G{\'{e}}otechnique} {\bf 2019}, {\em 69},~1035--1055.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1680/jgeot.17.p.267}{\detokenize{10.1680/jgeot.17.p.267}}}.
+
+\bibitem[Pastor \em{et~al.}(2017)Pastor, Yague, Stickle, Manzanal, and
+  Mira]{Pastor2017}
+Pastor, M.; Yague, A.; Stickle, M.; Manzanal, D.; Mira, P.
+\newblock A two-phase {SPH} model for debris flow propagation.
+\newblock {\em International Journal for Numerical and Analytical Methods in
+  Geomechanics} {\bf 2017}, {\em 42},~418--448.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nag.2748}{\detokenize{10.1002/nag.2748}}}.
+
+\bibitem[Pastor \em{et~al.}(2021)Pastor, Tayyebi, Stickle, Yag\''ue, Molinos,
+  Navas, and Manzanal]{Pastor2021}
+Pastor, M.; Tayyebi, S.M.; Stickle, M.M.; Yag\''ue, A.; Molinos, M.; Navas, P.;
+  Manzanal, D.
+\newblock {A depth integrated, coupled, two-phase model for debris flow
+  propagation}.
+\newblock {\em Acta Geotechnica} {\bf 2021}, {\em Online}.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1007/s11440-020-01114-4}{\detokenize{10.1007/s11440-020-01114-4}}}.
+
+\bibitem[Zabala and Alonso(2011)]{Zaba2011}
+Zabala, F.; Alonso, E.E.
+\newblock {Progressive failure of Aznalc{\'{o}}llar dam using the material
+  point method}.
+\newblock {\em G{\'{e}}otechnique} {\bf 2011}, pp. 795--808.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1680/geot.9.P.134}{\detokenize{10.1680/geot.9.P.134}}}.
+
+\bibitem[Yerro \em{et~al.}(2015)Yerro, Alonso, and Pinyol]{Yerro:2015}
+Yerro, A.; Alonso, E.E.; Pinyol, N.M.
+\newblock {The material point method for unsaturated soils}.
+\newblock {\em Geotechnique} {\bf 2015}, {\em 65},~201--217.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1680/geot.14.P.163}{\detokenize{10.1680/geot.14.P.163}}}.
+
+\bibitem[Yerro \em{et~al.}(2016)Yerro, Alonso, and Pinyol]{Yerro:2016}
+Yerro, A.; Alonso, E.E.; Pinyol, N.M.
+\newblock {Run-out of landslides in brittle soils}.
+\newblock {\em Computers and Geotechnics} {\bf 2016}, {\em 80},~427--439.
+
+\bibitem[Feng \em{et~al.}(2021)Feng, Wang, Huang, and Jin]{Feng2021}
+Feng, K.; Wang, G.; Huang, D.; Jin, F.
+\newblock Material point method for large-deformation modeling of coseismic
+  landslide and liquefaction-induced dam failure.
+\newblock {\em Soil Dynamics and Earthquake Engineering} {\bf 2021}, {\em
+  150},~106907.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.1016/j.soildyn.2021.106907}{\detokenize{https://doi.org/10.1016/j.soildyn.2021.106907}}}.
+
+\bibitem[Sizkow and {El Shamy}(2021)]{SIZKOW2021}
+Sizkow, S.F.; {El Shamy}, U.
+\newblock SPH-DEM simulations of saturated granular soils liquefaction
+  incorporating particles of irregular shape.
+\newblock {\em Computers and Geotechnics} {\bf 2021}, {\em 134},~104060.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.1016/j.compgeo.2021.104060}{\detokenize{https://doi.org/10.1016/j.compgeo.2021.104060}}}.
+
+\bibitem[Rice(1973)]{Rice1973}
+Rice, J.R.
+\newblock The Initiation and growth of shear band.
+\newblock  In Plasticity and soil mechanics (ed. A. C. Palmer). Cambridge:
+  Cambridge University Engineering Department.,  1973, pp. 263--274.
+
+\bibitem[Desrues(1984)]{Desrues_1984}
+Desrues, J.
+\newblock La localisation de la déformation dans les milieux granulaires,.
+\newblock PhD thesis,  1984.
+
+\bibitem[Sulem and Vardoulakis(1995)]{Sulem1995}
+Sulem, J.; Vardoulakis, I.
+\newblock {\em Bifurcation Analysis in Geomechanics}; {CRC} Press,  1995.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1201/9781482269383}{\detokenize{10.1201/9781482269383}}}.
+
+\bibitem[Wang \em{et~al.}(1997)Wang, Sluys, and De~Borst]{Wang:1997}
+Wang, W.; Sluys, L.; De~Borst, R.
+\newblock Viscoplasticity for instabilities due to strain softening and
+  strain-rate softening.
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  1997}, {\em 40},~3839--3864.
+
+\bibitem[Gutiérrez and De~Borst(1999)]{GutierreDeBort}
+Gutiérrez, M.A.; De~Borst, R.
+\newblock Numerical analysis of localization using a viscoplastic
+  regularization: influence of stochastic material defects.
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  1999}, {\em 44},~1823--1841,
+  \href{http://xxx.lanl.gov/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291097-0207%2819990430%2944%3A12%3C1823%3A%3AAID-NME564%3E3.0.CO%3B2-5}{{\normalfont
+  [https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291097-0207%2819990430%2944%3A12%3C1823%3A%3AAID-NME564%3E3.0.CO%3B2-5]}}.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.1002/(SICI)1097-0207(19990430)44:12<1823::AID-NME564>3.0.CO;2-5}{\detokenize{https://doi.org/10.1002/(SICI)1097-0207(19990430)44:12<1823::AID-NME564>3.0.CO;2-5}}}.
+
+\bibitem[Bjerrum(1967)]{Bjerrum1967}
+Bjerrum, L.
+\newblock Engineering Geology of Norwegian Normally-Consolidated Marine Clays
+  as Related to Settlements of Buildings.
+\newblock {\em G{\'{e}}otechnique} {\bf 1967}, {\em 17},~83--118.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1680/geot.1967.17.2.83}{\detokenize{10.1680/geot.1967.17.2.83}}}.
+
+\bibitem[Kim and Leroueil(2001)]{Kim2001}
+Kim, Y.T.; Leroueil, S.
+\newblock Modeling the viscoplastic behaviour of clays during consolidation:
+  application to Berthierville clay in both laboratory and field conditions.
+\newblock {\em Canadian Geotechnical Journal} {\bf 2001}, {\em 38},~484--497.
+
+\bibitem[Fed(1992)]{Feda}
+In {\em Creep of Soils and Related Phenomena}; Developments in Geotechnical
+  Engineering, Elsevier,  1992; pp. 3--422.
+
+\bibitem[Manzanal \em{et~al.}(2015)Manzanal, Pastor, Javanmardi,
+  {Fern{\'{a}}ndez Merodo}, Mira, {Mart{\'{i}}n Stickle}, and
+  Yag{\"{u}}e]{Manzanal2015}
+Manzanal, D.; Pastor, M.; Javanmardi, Y.; {Fern{\'{a}}ndez Merodo}, J.A.; Mira,
+  P.; {Mart{\'{i}}n Stickle}, M.; Yag{\"{u}}e, A.
+\newblock {\em {A reference state curve to define the state of soils over a
+  wide range of pressures and densities}}, coupled an ed.;  2015.
+
+\bibitem[Adachi and Okano(1974)]{ADACHI1974}
+Adachi, T.; Okano, M.
+\newblock A Constitutive Equation for Normally Consolidated Clay.
+\newblock {\em Soils and Foundations} {\bf 1974}, {\em 14},~69--73.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.3208/sandf1972.14.4_55}{\detokenize{https://doi.org/10.3208/sandf1972.14.4_55}}}.
+
+\bibitem[Heeres \em{et~al.}(2002)Heeres, Suiker, and {de Borst}]{HEERES20021}
+Heeres, O.M.; Suiker, A.S.; {de Borst}, R.
+\newblock A comparison between the Perzyna viscoplastic model and the
+  Consistency viscoplastic model.
+\newblock {\em European Journal of Mechanics - A/Solids} {\bf 2002}, {\em
+  21},~1--12.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.1016/S0997-7538(01)01188-3}{\detokenize{https://doi.org/10.1016/S0997-7538(01)01188-3}}}.
+
+\bibitem[Perzyna(1966)]{Perzyna:66}
+Perzyna, P.
+\newblock Fundamental Problems in Viscoplasticity.
+\newblock {\em Advances in Applied Mechanics} {\bf 1966}, {\em 9},~243--377.
+
+\bibitem[Naghdi and Murch(1963)]{Naghdi1963}
+Naghdi, P.M.; Murch, S.A.
+\newblock On the Mechanical Behavior of Viscoelastic/Plastic Solids.
+\newblock {\em Journal of Applied Mechanics} {\bf 1963}, {\em 30},~321--328.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1115/1.3636556}{\detokenize{10.1115/1.3636556}}}.
+
+\bibitem[Nova(1982)]{Nova1982}
+Nova.
+\newblock A viscoplastic constitutive model for normally consolidated clays.
+\newblock {\em International union of theoretical and applied mechanics
+  conference on deformation and failure of granular materials.Delft,
+  Netherlands.} {\bf 1982}, pp. 287--295.
+
+\bibitem[Blanc and Pastor(2012)]{BlancPastor2012}
+Blanc, T.; Pastor, M.
+\newblock {A stablized {\{}Runge-Kutta, Taylor{\}} smoothed particle
+  hydrodynamics algorithm for large deformation problems in dynamics}.
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  2012}, {\em 91},~1427--1458.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nme}{\detokenize{10.1002/nme}}}.
+
+\bibitem[Navas \em{et~al.}(2018)Navas, Yu, Li, and Ruiz]{Navas2018a}
+Navas, P.; Yu, R.C.; Li, B.; Ruiz, G.
+\newblock {Modeling the dynamic fracture in concrete: an eigensoftening
+  meshfree approach}.
+\newblock {\em International Journal of Impact Engineering} {\bf 2018}, {\em
+  113},~9--20.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.ijimpeng.2017.11.004}{\detokenize{10.1016/j.ijimpeng.2017.11.004}}}.
+
+\bibitem[Molinos \em{et~al.}(2021)Molinos, Navas, Manzanal, and
+  Pastor]{Molinos2020b}
+Molinos, M.; Navas, P.; Manzanal, D.; Pastor, M.
+\newblock Local Maximum Entropy Material Point Method applied to quasi-brittle
+  fracture.
+\newblock {\em Engineering Fracture Mechanics} {\bf 2021}, {\em 241},~107394.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.engfracmech.2020.107394}{\detokenize{10.1016/j.engfracmech.2020.107394}}}.
+
+\bibitem[{de Souza Neto} \em{et~al.}(2005){de Souza Neto}, Pires, Owen, and
+  {Andrade Pires}]{DPOwen2005}
+{de Souza Neto}, E.A.; Pires, F.M.; Owen, D.R.J.; {Andrade Pires}, F.M.
+\newblock {F-bar-based linear triangles and tetrahedra for finte strain
+  analysis of nearly incompressible solids. {\{}Part I:{\}} formulation and
+  benchmarking}.
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  2005}, {\em 62},~353--383.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nme.1187}{\detokenize{10.1002/nme.1187}}}.
+
+\bibitem[Owen and Hinton(1981)]{Owen1981}
+Owen, D.R.J.; Hinton, E.
+\newblock {\em {Finite elements in plasticity---theory and practice}};
+  Pineridge Press, Swansea,  1981; p. 603.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nme.1620170712}{\detokenize{10.1002/nme.1620170712}}}.
+
+\bibitem[Schmidt \em{et~al.}(2009)Schmidt, Fraternali, and Ortiz]{schmidt09}
+Schmidt, B.; Fraternali, F.; Ortiz, M.
+\newblock {Eigenfracture: an eigendeformation approach to variational
+  fracture.}
+\newblock {\em SIAM J. Multiscale Model. Simul.} {\bf 2009}, {\em
+  7},~1237--1266.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1137/080712568}{\detokenize{10.1137/080712568}}}.
+
+\bibitem[Pandolfi and Ortiz(2012)]{Pandolfi_12}
+Pandolfi, A.; Ortiz, M.
+\newblock {An eigenerosion approach to brittle fracture.}
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  2012}, {\em 92},~694--714.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nme}{\detokenize{10.1002/nme}}}.
+
+\bibitem[Li \em{et~al.}(2012)Li, Kadane, Ravichandran, Ortiz, and
+  Kidane]{Li_12}
+Li, B.; Kadane, A.; Ravichandran, G.; Ortiz, M.; Kidane, A.
+\newblock {Verification and validation of the optimal-transportation meshfree
+  (OTM) simulation of terminal ballistics.}
+\newblock {\em International Journal of Impact Engineering} {\bf 2012}, {\em
+  42},~25--36.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.ijimpeng.2011.11.003}{\detokenize{10.1016/j.ijimpeng.2011.11.003}}}.
+
+\bibitem[Pandolfi \em{et~al.}(2013)Pandolfi, Li, and Ortiz]{Pandolfi_13}
+Pandolfi, A.; Li, B.; Ortiz, M.
+\newblock {Modeling fracture by material-point erosion.}
+\newblock {\em International Journal of fracture} {\bf 2013}, {\em 184},~3--16.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1007/s10704-012-9788-x}{\detokenize{10.1007/s10704-012-9788-x}}}.
+
+\bibitem[Yu \em{et~al.}(2018)Yu, Navas, and Ruiz]{Yu2018}
+Yu, R.C.; Navas, P.; Ruiz, G.
+\newblock {Meshfree modeling of the dynamic mixed-mode fracture in FRC through
+  an eigensoftening approach}.
+\newblock {\em Engineering Structures} {\bf 2018}, {\em 172},~94--104.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.engstruct.2018.06.010}{\detokenize{10.1016/j.engstruct.2018.06.010}}}.
+
+\bibitem[Ba{\v{z}}ant and Oh(1983)]{Bazant83}
+Ba{\v{z}}ant, Z.P.; Oh, B.H.
+\newblock {Crack band theory for fracture in concrete.}
+\newblock {\em Materials and Structures} {\bf 1983}, {\em 16},~155--177.
+
+\bibitem[Ba{\v{z}}ant and Planas(2019)]{Bazant98}
+Ba{\v{z}}ant, Z.P.; Planas, J.
+\newblock {\em {Fracture and Size Effect in Concrete and Other Quasibrittle
+  Materials}}; New directions in Civil Engineering, CRC Press, Boca Raton,
+  Florida, USA,  2019; pp. 1--170.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1201/9780203756799}{\detokenize{10.1201/9780203756799}}}.
+
+\bibitem[Zhang \em{et~al.}(2015)Zhang, Wang, Randolph, and Puzrin]{Zhang2015}
+Zhang, W.; Wang, D.; Randolph, M.; Puzrin, A., M.
+\newblock Catastrophic failure in planar landslides with a fully softened weak
+  zone.
+\newblock {\em G\'eotechnique} {\bf 2015}, {\em 65},~755--769.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1680/geot14.P.218}{\detokenize{10.1680/geot14.P.218}}}.
+
+\bibitem[Wang \em{et~al.}(2021)Wang, Zhang, and Tinti]{Wang21}
+Wang, L.; Zhang, X.; Tinti, S.
+\newblock Large deformation dynamic analysis of progressive failure in layered
+  clayey slopes under seismic loading using the particle finite element method.
+\newblock {\em Acta Geotechnica} {\bf 2021}, {\em 16},~2435--2448.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1007/s11440-021-01142-8}{\detokenize{10.1007/s11440-021-01142-8}}}.
+
+\bibitem[Singh \em{et~al.}(2021)Singh, Stanier, Bienen, and Randolph]{Singh21}
+Singh, V.; Stanier, S.; Bienen, B.; Randolph, M.F.
+\newblock Modelling the behaviour of sensitive clays experiencing large
+  deformations using non-local regularisation techniques.
+\newblock {\em Computers and Geotechnics} {\bf 2021}, {\em 133},~104025.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.compgeo.2021.104025}{\detokenize{10.1016/j.compgeo.2021.104025}}}.
+
+\bibitem[Li \em{et~al.}(2010)Li, Habbal, and Ortiz]{li2010}
+Li, B.; Habbal, F.; Ortiz, M.
+\newblock {Optimal transportation meshfree approximation schemes for fluid and
+  plastic flows}.
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  2010}, {\em 83},~1541--1579.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nme}{\detokenize{10.1002/nme}}}.
+
+\bibitem[Li \em{et~al.}(2014)Li, Stalzer, and Ortiz]{li2014}
+Li, B.; Stalzer, M.; Ortiz, M.
+\newblock {A massively parallel implementation of the Optimal Transportation
+  Meshfree (pOTM) method for explicit solid dynamics}.
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  2014}, {\em 100},~40--61.
+
+\bibitem[Huang \em{et~al.}(2019)Huang, Wei{\ss}enfels, and Wriggers]{Huang2019}
+Huang, D.; Wei{\ss}enfels, C.; Wriggers, P.
+\newblock {Modelling of serrated chip formation processes using the stabilized
+  optimal transportation meshfree method}.
+\newblock {\em International Journal of Mechanical Sciences} {\bf 2019}, {\em
+  155},~323--333.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.ijmecsci.2019.03.005}{\detokenize{10.1016/j.ijmecsci.2019.03.005}}}.
+
+\bibitem[Navas \em{et~al.}(2020)Navas, Manzanal, {Mart{\'{i}}n Stickle},
+  Pastor, and Molinos]{Navas2020}
+Navas, P.; Manzanal, D.; {Mart{\'{i}}n Stickle}, M.; Pastor, M.; Molinos, M.
+\newblock {Meshfree modeling of cyclic behavior of sands within large strain
+  Generalized Plasticity Framework}.
+\newblock {\em Computers and Geotechnics} {\bf 2020}, {\em 122},~103538.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1016/j.compgeo.2020.103538}{\detokenize{10.1016/j.compgeo.2020.103538}}}.
+
+\bibitem[Navas \em{et~al.}(2021)Navas, Pastor, Yagüe, Stickle, Manzanal, and
+  Molinos]{Navas2021}
+Navas, P.; Pastor, M.; Yagüe, A.; Stickle, M.M.; Manzanal, D.; Molinos, M.
+\newblock Fluid stabilization of the u-w Biot's formulation at large strain.
+\newblock {\em International Journal for Numerical and Analytical Methods in
+  Geomechanics} {\bf 2021}, {\em 45},~336--352.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/https://doi.org/10.1002/nag.3158}{\detokenize{https://doi.org/10.1002/nag.3158}}}.
+
+\bibitem[Arroyo and Ortiz(2006)]{arroyo2006}
+Arroyo, M.; Ortiz, M.
+\newblock {Local maximum-entropy approximation schemes: a seamless bridge
+  between finite elements and meshfree methods}.
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  2006}, {\em 65},~2167--2202.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nme.1534}{\detokenize{10.1002/nme.1534}}}.
+
+\bibitem[Kontoe(2006)]{Kontoe2006}
+Kontoe, S.
+\newblock {Developement of time integration schemes and advanced boundary
+  conditions for dynamic geotechnical analysis}.
+\newblock PhD thesis, D. thesis,  2006.
+
+\bibitem[Wriggers(2008)]{wriggers:08}
+Wriggers, P.
+\newblock {\em {Nonlinear Finite Element Methods}}; Vol. 2008, Springer,  2008.
+
+\bibitem[Navas \em{et~al.}(2018)Navas, L{\'{o}}pez-Querol, Yu, and
+  Pastor]{Navas2018}
+Navas, P.; L{\'{o}}pez-Querol, S.; Yu, R.C.; Pastor, M.
+\newblock {Optimal transportation meshfree method in geotechnical engineering
+  problems under large deformation regime}.
+\newblock {\em International Journal for Numerical Methods in Engineering} {\bf
+  2018}, {\em 115},~1217--1240.
+\newblock
+  doi:{\changeurlcolor{black}\href{https://doi.org/10.1002/nme.5841}{\detokenize{10.1002/nme.5841}}}.
+
+\end{thebibliography}

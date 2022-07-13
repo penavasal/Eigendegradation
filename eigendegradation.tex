@@ -67,7 +67,7 @@
 %\usepackage{algorithmic}
 \usepackage{algorithm}
 \usepackage{algcompatible}
-\usepackage{color}
+\usepackage{color,paracol}
 
 \usepackage{epsfig}
 \usepackage{subfigure}
@@ -77,6 +77,7 @@
 
 \usepackage{color}
 \usepackage{cancel}
+
 
 \newcommand{\etal}{
   \textit{et al.}
@@ -112,10 +113,10 @@
 \orcidA{}, Diego Manzanal$^{1}$\orcidE{}*, Susana L\'opez-Querol $^{2}$\orcidB{} Angel Yag\"ue$^{1}$\orcidC{} and Miguel Mart\'in Stickle $^{1}$\orcidD{}}
 
 % MDPI internal command: Authors, for metadata in PDF
-\AuthorNames{Pedro Navas,  Diego Manzanal,Susana L\'opez-Querol, Angel Yag\"ue and Miguel Mart\'in Stickle }
+\AuthorNames{Pedro Navas, Diego Manzanal, Susana L\'opez-Querol, Angel Yag\"ue and Miguel Mart\'in Stickle }
 
 % MDPI internal command: Authors, for citation in the left column
-\AuthorCitation{Navas, P.,  Manzanal,L\'opez-Querol, S., D., Yag\"ue, A. and Stickle, M.M.}
+\AuthorCitation{Navas, P., Manzanal, L\'opez-Querol, S., D., Yag\"ue, A. and Stickle, M.M.}
 % If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
 
 % Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
@@ -173,6 +174,7 @@ $^{2}$ \quad Department of Civil, Environmental and Geomatic Engineering, Univer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+%\begin{paracol}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 The failure of geomaterials has been a topic of study since the early work of Coulomb in 1877. It has been developed theoretically in soil mechanics since the work of Drucker and Prager \cite{Drucker-Prager}. Failures are idealized into two types depending on the state of the material: diffuse and localized.
@@ -487,19 +489,19 @@ The derivation of the weak form of the problem needs the multiplication by the t
 \end{eqnarray}
 where $\Omega$ represents the volume of the body and $\Gamma$ the boundary where tractions are applied. The first term of the equation is defined as the internal forces, meanwhile the second and forth conform the external forces. The next step is the interpolation through the Optimal Transportation Meshfree~\cite{li2010,li2014,Huang2019}, a meshfree method that has been demonstrated to perform reasonably well in geotechnical problems~\cite{Navas2020,Navas2021}. It is based in the conjunction of material points and nodes. As mentioned before, the shape functions are based on the work of Arroyo and Ortiz~\cite{arroyo2006}, who defined the Local Max-Ent shape function (LME) of the material point $\boldsymbol(x)$ with respect to the neighborhood $\boldsymbol(x_a)$ as follows:
 \begin{equation} \label{eq_N1}
-N_a(\textbf{x})=\frac{\exp\left[ -\beta__{LME} \; |\bf x-x_a|^2 +  \boldsymbol{\lambda}^*  \cdot  (x-x_a)  \right] } {Z(\textbf{x},\boldsymbol{\lambda}^*(\textbf{x}))},
+N_a(\textbf{x})=\frac{\exp\left[ -\beta_{_{LME}} \; |\bf{x-x_a}|^2 +  \boldsymbol{\lambda}^*  \cdot  (x-x_a)  \right] } {Z(\textbf{x},\boldsymbol{\lambda}^*(\textbf{x}))},
 \end{equation}
 where the computation is done along a neighborhood $N_b$ and 
 \begin{equation}\label{eq_N2}
-Z({\bf x}, {\boldsymbol{\lambda}}) = \sum_{a=1}^{Nb}{ \exp \left[ -\beta__{LME} \, |{\bf x-x_a}|^2 + \boldsymbol{\lambda}  \cdot  \bf {(x-x_a)}         \right]}.
+Z({\bf x}, {\boldsymbol{\lambda}}) = \sum_{a=1}^{Nb}{ \exp \left[ -\beta_{_{LME}} \, |{\bf x-x_a}|^2 + \boldsymbol{\lambda}  \cdot  \bf {(x-x_a)}         \right]}.
 \end{equation}
 The first derivatives of the shape function can be obtained from the own shape function and its Hessian matrix \textbf{J} by employing the following expression:
 \begin{eqnarray}
 \nabla N^*_a &=& -N^*_a \,  (\textbf{J}^*)^{-1} \,  (\bf x-x_a) \label{eq_N3} ,
 \end{eqnarray}
-The parameter $\beta__{LME}$ defines the shape of the neighborhood, and it is related with the discretization size (or nodal spacing), $h$,  and the constant, $\gamma__{LME}$, which controls the locality of the shape functions, as follows,
+The parameter $\beta_{_{LME}}$ defines the shape of the neighborhood, and it is related with the discretization size (or nodal spacing), $h$,  and the constant, $\gamma_{_{LME}}$, which controls the locality of the shape functions, as follows,
 \begin{equation}\label{eqLM3}
-\beta=\frac{\gamma__{LME}}{h^2}.
+\beta=\frac{\gamma_{_{LME}}}{h^2}.
 \end{equation} 
 
 It bears emphasis that $\boldsymbol{\lambda}^*(\bf x)$ comes from the minimization of the function $g(\boldsymbol{\lambda})=\log Z(\bf x, \boldsymbol{\lambda})$ to guarantee the maximum entropy.\\
@@ -551,7 +553,7 @@ Three tests have been studied in this research. The two first applications are d
 
 \subsection{Shear test}
 \label{S41}
-In the first example, the behavior of a weak layer under a shear test is analyzed. In Fig.~\ref{fig_geoshear} an embankment of 10 meters of depth is presented. A weak layer in the bottom of the domain of 0.5 meters appears. The proposed shear test is similar to the one proposed by Zhang \texit{et al.}\cite{Zhang2015}. Although different constitutive laws are employed (local and non-local), since both are based on similar degradation processes, it is expected to obtain comparable results.
+In the first example, the behavior of a weak layer under a shear test is analyzed. In Fig.~\ref{fig_geoshear} an embankment of 10 meters of depth is presented. A weak layer in the bottom of the domain of 0.5 meters appears. The proposed shear test is similar to the one proposed by Zhang \textit{et al.} \cite{Zhang2015}. Although different constitutive laws are employed (local and non-local), since both are based on similar degradation processes, it is expected to obtain comparable results.
 
 The original embankment's length is 700 m. Since the softened zone only extends 90 m. and considering infinite conditions at both sides of this softened zone, only this 90 m. are modeled in order to save computational time. Unlike the original example, gravity conditions are neglected, considering the failure of the embankment at the final  of the residual strength. Thus, the parameters needed in this example are shown in Table~\ref{tab2}. It is important to point out that, in this research, the proposed non-local degradation model has been employed with a neighborhood parameter, $C_epsilon$, of 1.5. This is an important difference with the model proposed for the original example, which evaluates the degradation locally in an Arbitrary Eulerian-Lagrangian (ALE) configuration.
 
@@ -584,7 +586,7 @@ The original embankment's length is 700 m. Since the softened zone only extends 
 
 In addition, the geometry and boundary conditions can be seen in Fig.~\ref{fig_geoshear}. About the latest, two boundary conditions have been considered. In the first one, $\Gamma_1$ in Fig.~\ref{fig_geoshear}, both vertical and horizontal displacements are constrained. In $\Gamma_2$ a horizontal displacement of 10 meters is imposed gradually from 0 to 1000 s.
 
-The stress behavior is analyzed in Fig.~\ref{fig_resshear}. In order to assess the performance of the proposed algorithm, similar to the figure proposed by Zhang \texit{et al.}\cite{Zhang2015}, in Fig.~\ref{fig_resshear} a dimensionless measurement of the shear stress is plotted. It is calculated as a relative increment from the residual shear strength $\tau_{95}$ and divided by the maximum increment, measured from the initial (or peak) strength to the residual one, $\tau_p-\tau_{95}$. On the other hand, in the abscissa, the dimensionless distance from the beginning of the degradation is plotted. Thus, the degradation starts from 0 until reaching the $\tau_{95}$ at distance 1. 
+The stress behavior is analyzed in Fig.~\ref{fig_resshear}. In order to assess the performance of the proposed algorithm, similar to the figure proposed by Zhang \textit{et al.}\cite{Zhang2015}, in Fig.~\ref{fig_resshear} a dimensionless measurement of the shear stress is plotted. It is calculated as a relative increment from the residual shear strength $\tau_{95}$ and divided by the maximum increment, measured from the initial (or peak) strength to the residual one, $\tau_p-\tau_{95}$. On the other hand, in the abscissa, the dimensionless distance from the beginning of the degradation is plotted. Thus, the degradation starts from 0 until reaching the $\tau_{95}$ at distance 1. 
 
 \begin{figure}[!t]
 \begin{center}
@@ -594,7 +596,7 @@ The stress behavior is analyzed in Fig.~\ref{fig_resshear}. In order to assess t
 \end{center}
 \end{figure}
 
-Results obtained in this research and the ones obtained by Zhang \texit{et al.}\cite{Zhang2015} are not coincident since they are different approaches; however, the overall trend, mainly after the beginning of the degradation, is similar to the reference research. This application allows us to assess the performance of a degraded layer of soft clay, which has been proved to perform similar to other validated studies.
+Results obtained in this research and the ones obtained by Zhang \textit{et al.}\cite{Zhang2015} are not coincident since they are different approaches; however, the overall trend, mainly after the beginning of the degradation, is similar to the reference research. This application allows us to assess the performance of a degraded layer of soft clay, which has been proved to perform similar to other validated studies.
 
 \subsection{Strip footing load}
 \label{S42}
@@ -620,7 +622,7 @@ The first calculation is made by activating the degradation part. This degradati
 \end{center}
 \end{figure}
 
-In order to verify the performance of the full model, different viscous parameters have been employed in the calculation of the failure load of the strip footing. Establishing the sensitivity parameter $\alpha$ as 1.0, the viscous parameter has been varied with different values (see Fig.~\ref{fig_geozap}). The obtained results have been depicted in Fig.\ref{visco} for different values of $\mu$. The smaller the value of the $\mu$ parameter (\texit{i.e.} large values of $\gamma$), the higher the final loading is obtained from the footing loading, as expected from the viscous model. In addition, in dashed line, the reference value obtained by Navas \texit{et al.}~\cite{Navas2018} is depicted. This line can be considered as the value of a pseudo-static load is applied, without any rigidization due to the viscous behavior. This value is very close to the one obtained with $\mu=200$ s. 
+In order to verify the performance of the full model, different viscous parameters have been employed in the calculation of the failure load of the strip footing. Establishing the sensitivity parameter $\alpha$ as 1.0, the viscous parameter has been varied with different values (see Fig.~\ref{fig_geozap}). The obtained results have been depicted in Fig.\ref{visco} for different values of $\mu$. The smaller the value of the $\mu$ parameter (\textit{i.e.} large values of $\gamma$), the higher the final loading is obtained from the footing loading, as expected from the viscous model. In addition, in dashed line, the reference value obtained by Navas \textit{et al.}~\cite{Navas2018} is depicted. This line can be considered as the value of a pseudo-static load is applied, without any rigidization due to the viscous behavior. This value is very close to the one obtained with $\mu=200$ s. 
 
 \begin{figure}
 \begin{center}
@@ -630,7 +632,7 @@ In order to verify the performance of the full model, different viscous paramete
 \end{center}
 \end{figure}
 
-Similarly, depending on the loading rate, the material can get stiffer and provide bigger response of the reaction forces. Thus, for $\mu=200$ s., 3 different loading rates have been tested. The obtained results have been depicted in Fig.\ref{visco2} for different values of $t_f$, being this parameter the final time of application of the imposed displacement ($u_y=u_f\left(t/t_f\right)^2$). The quicker is the application of the displacement, the higher the final loading is obtained from the footing loading, as expected from the viscous model. In addition, in dashed line, the reference pseudo-static value, obtained by Navas \texit{et al.}~\cite{Navas2018}, is depicted also in this figure, being close to the slowest case.
+Similarly, depending on the loading rate, the material can get stiffer and provide bigger response of the reaction forces. Thus, for $\mu=200$ s., 3 different loading rates have been tested. The obtained results have been depicted in Fig.\ref{visco2} for different values of $t_f$, being this parameter the final time of application of the imposed displacement ($u_y=u_f\left(t/t_f\right)^2$). The quicker is the application of the displacement, the higher the final loading is obtained from the footing loading, as expected from the viscous model. In addition, in dashed line, the reference pseudo-static value, obtained by Navas \textit{et al.}~\cite{Navas2018}, is depicted also in this figure, being close to the slowest case.
 
 \begin{figure}
 \begin{center}
@@ -759,6 +761,6 @@ ALE & Arbitrary Eulerian-Lagrangian
 %Reviewer 3 comments and authors’ response
 %}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\end{paracol}
+\end{thebibliography}
 \end{document}
 
