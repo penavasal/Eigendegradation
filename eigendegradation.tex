@@ -110,13 +110,13 @@
 
 % Authors, for the paper (add full first names)
 \Author{Pedro Navas $^{1}$ %,\dagger,\ddagger}$
-\orcidA{}, Diego Manzanal$^{1}$\orcidE{}*, Susana L\'opez-Querol $^{2}$\orcidB{} Angel Yag\"ue$^{1}$\orcidC{} and Miguel Mart\'in Stickle $^{1}$\orcidD{}}
+\orcidA{}, Diego Manzanal$^{1}$\orcidE{}*, Angel Yag\"ue$^{1}$\orcidC{}, Miguel Mart\'in Stickle $^{1}$\orcidD{} and Susana L\'opez-Querol $^{2}$\orcidB{}}
 
 % MDPI internal command: Authors, for metadata in PDF
-\AuthorNames{Pedro Navas, Diego Manzanal, Susana L\'opez-Querol, Angel Yag\"ue and Miguel Mart\'in Stickle }
+\AuthorNames{Pedro Navas, Diego Manzanal, Angel Yag\"ue, Miguel Mart\'in Stickle and Susana L\'opez-Querol}
 
 % MDPI internal command: Authors, for citation in the left column
-\AuthorCitation{Navas, P., Manzanal, L\'opez-Querol, S., D., Yag\"ue, A. and Stickle, M.M.}
+\AuthorCitation{Navas, P., Manzanal, D., Yag\"ue, A., Stickle, M.M. and  L\'opez-Querol, S.}
 % If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
 
 % Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
@@ -137,7 +137,7 @@ $^{2}$ \quad Department of Civil, Environmental and Geomatic Engineering, Univer
 %\conference{} % An extended version of a conference paper
 
 % Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{The time dependence of soil behavior is of particular interest for embankments in soft clays, shear band progression in slopes or where the speed of the load application affects the bearing capacity of the material. This study extends non-local failure, algorithms such as Eigenerosion and Eigensoftening, in order to evaluate the failure of weak layers.  In particular, the time dependence of shear band progression is analyzed through the integration of a Perzyna-type visco-plastic model with a degradation algorithm within the Optimal Transportation Meshfree (OTM) framework. The validation of the proposed algorithm is carried out through three practical cases. 
+\abstract{In geotechnical engineering, very often the soil behavior varies with the time. This is of particular interest in many cases such as embankments in soft clays, shear band progression in slopes or where the speed of the application of the load affects the bearing capacity of the material. In this paper, the extension of non-local failures, algorithms such as eigenerosion and eigensoftening, in order to evaluate the failure of weak layers, are presented.  In particular, the time dependence of the progression of shear bands is analyzed through the integration of a Perzyna-type visco-plastic model with a degradation algorithm within the Optimal Transportation Meshfree (OTM) framework. The validation of the proposed algorithm is carried out through three practical cases, showing very good agreement.
 }
 
 % Keywords
@@ -177,17 +177,17 @@ $^{2}$ \quad Department of Civil, Environmental and Geomatic Engineering, Univer
 %\begin{paracol}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-The failure of geomaterials has been a topic of study since the early work of Coulomb in 1877. It has been developed theoretically in soil mechanics since the work of Drucker and Prager \cite{Drucker-Prager}. Failures are idealized into two types depending on the state of the material: diffuse and localized.
+The failure of geomaterials has been a topic of study since the early work of Coulomb back in 1877. The work of Drucker and Prager \cite{Drucker-Prager} is an example of the theoretical derivation of these problems. Failures can be classified in two types depending on the state of the material: diffuse and localized.
 
-Diffuse failures are associated with the instability of loose and saturated materials (e.g. \cite{DarveLaouafa2000}, \cite{Pastor2009b}) under monotonic and dynamic loads. The increase of the pore pressure leads the material to liquefy, reduces the material's effective stresses to zero, and provokes landslides involving large volumes of material. Numerical modeling of diffuse failure initiation has been developed in finite elements to reproduce failures in mine tailing dams (\cite{Ledesma2021}, \cite{Ledesma2022}), to reproduce landslide failures (\cite{Laouafa2002}, \cite{FernandezMerodo2004}) or the study of loose saturated material under seismic action (\cite{LopezQuerolB2006}, \cite{Manzanal2021}). Recently, these phenomena have been studied with meshfree techniques, allowing to evaluate the transition from solid to fluidized materials with SPH techniques with one (e.g. \cite{Pastor2009b}, \cite{Manzanal2016}, \cite{Dutto2017}, \cite{Longo2019}, \cite{Lin2019}) and two phases (\cite{Pastor2017}, \cite{Pastor2021}), Material Point Method, MPM, (e.g. \cite{Zaba2011,Yerro:2015,Yerro:2016}) and Discrete Element Methods, DEM, for the liquefaction on granular materials (e.g. \cite{Feng2021}, \cite{SIZKOW2021}).
+Diffuse failures are associated with the instability of loose and saturated materials (e.g. \cite{DarveLaouafa2000}, \cite{Pastor2009b}) under monotonic and dynamic loads. In the latter, the increase of the pore pressure can cause the liquefaction of the material, when its effective stress vanishes as a result of this increase of pore pressure when the total stress remains constant. This effect can produce landslides, involving the displacement of large volumes of material. The numerical modeling of the initiation of diffuse failure has been developed in finite elements to reproduce failures in mine tailing dams (\cite{Ledesma2021}, \cite{Ledesma2022}), landslides (\cite{Laouafa2002}, \cite{FernandezMerodo2004}) or the study of the response of loose saturated, granular material under seismic action (\cite{LopezQuerolB2006}, \cite{Manzanal2021}). Recently, these phenomena have been studied with meshfree techniques, allowing to evaluate the transition from solid to fluidized materials with SPH techniques with one (e.g. \cite{Pastor2009b}, \cite{Manzanal2016}, \cite{Dutto2017}, \cite{Longo2019}, \cite{Lin2019}) and two phases (\cite{Pastor2017}; \cite{Pastor2021}), Material Point Method, MPM, (e.g. \cite{Zaba2011,Yerro:2015,Yerro:2016}) or Discrete Element Methods, DEM, for the liquefaction on granular materials (e.g. \cite{Feng2021}, \cite{SIZKOW2021}).
 
-In contrast, localized failures are associated with strain concentration in a narrow zone and a limited region, which produces a discontinuity in the deformation as well as in the strain rate. This failure is related to a weak discontinuity, also known as a weak layer. The progress of the failure of overconsolidated clays that present a softening behavior has been studied extensively. It consists of a reduction of the shear strength from the peak to the residual value. Early work by Rice \cite{Rice1973} provided the theoretical basis for understanding the physics and mathematics of the problem. The formation and propagation of shear bands have been studied through theoretical and lab-scale models (e.g. \cite{Desrues_1984}, \cite{Sulem1995}). Numerically, the localization of shear deformations associated with softening behaviors, which is related to negative slopes in the loading-displacement curve, traditionally depends on the mesh discretization (e.g.\cite{Wang:1997}. The employment of visco-plastic models has allowed the regularization of the problem (e.g. \cite{GutierreDeBort}).
+In contrast, localized failures are associated with the concentration of strains in a narrow zone and a limited region, which produces a discontinuity in the deformation as well as in the strain rate. This failure is related to a weak discontinuity, also known as a weak layer. The progress of the failure of overconsolidated clays that present a softening behavior has been extensively studied. It consists of the reduction of the shear strength from the peak to the residual value. Early work by Rice \cite{Rice1973} provided the theoretical basis for understanding the physics and mathematics of the problem. The formation and propagation of shear bands have been studied through theoretical and lab-scale models (e.g. \cite{Desrues_1984}, \cite{Sulem1995}). Numerically, the localization of shear deformations associated with softening behaviors, which is related to negative slopes in the loading-displacement curve, traditionally depends on the mesh discretization (e.g.\cite{Wang:1997}. The employment of visco-plastic models has allowed the regularization of the problem (e.g. \cite{GutierreDeBort}).
 
-Visco-plastic formulations have been developed to evaluate the rate-dependent failure of geomaterials, shear bands, creep and stress relaxation. In general, such constitutive formulations include empirical models focused on the evaluation of creep and stress relaxation for soft clays (\cite{Bjerrum1967}, \cite{Kim2001}), rheological models for a wide range of deformations (e.g. \cite{Feda}, \cite{Dutto2017}, \cite{Manzanal2015}) and general stress-strain-time constitutive models (e.g.\cite{ADACHI1974}, \cite{HEERES20021}). Elasto-plastic constitutive models incorporating rate dependence are based mainly on the over-stress theory (\cite{Perzyna:66}) and on the concept of a non-stationary flow surface (e.g. \cite{Naghdi1963}, \cite{Nova1982}). The over-stress theory assumes no viscous strains occur inside the static yield surface (elastic region). However, the inelastic region is rate dependent. This dependency is defined by an over-stress factor. This theory has been implemented in finite element and meshfree methods to study different geotechnical problems (e.g.\cite{Manzanal2015,BlancPastor2012}).  
+Visco-plastic formulations are common in the literature to evaluate the rate-dependent failure of geomaterials, shear bands, creep and stress relaxation. In general, such constitutive formulations include empirical models focused on the evaluation of creep and stress relaxation for soft clays (\cite{Bjerrum1967}, \cite{Kim2001}), rheological models for a wide range of deformations (e.g. \cite{Feda}, \cite{Dutto2017}, \cite{Manzanal2015}) and general stress-strain-time constitutive models (e.g.\cite{ADACHI1974}, \cite{HEERES20021}). Elasto-plastic constitutive models incorporating rate dependence are based mainly on the over-stress theory (\cite{Perzyna:66}) and on the concept of a non-stationary flow surface (e.g. \cite{Naghdi1963}, \cite{Nova1982}). The over-stress theory assumes no viscous strains occurring inside the static yield surface (elastic region). However, the inelastic region is rate dependent. This dependency is defined by an over-stress factor. This theory has been implemented in finite element and meshfree methods to study different geotechnical problems (e.g.\cite{Manzanal2015,BlancPastor2012}).  
 
-In this paper, we propose a methodology for evaluating the progression of a shear band or a weak layer through a phenomenological viscoplastic model, taking the benefits of a non-local failure approach. The proposed algorithm is based on the same principles of both Eigenerosion and Eigensoftening approaches, which have been widely employed through material point-based frameworks in order to assess the fracture evolution in quasi brittle materials (\cite{Navas2018a}, \cite{Molinos2020b}) once specific energy (Eigenerosion) or stress (Eigensoftening) thresholds are reached when the material point fails. Within the aforementioned algorithms, the failure can be modeled instantaneously (Eigenerosion) or following a material-dependent softening law (Eigensoftening). In order to achieve a diffuse failure through the degradation of the material, a combination of these algorithms within a Perzyna-type viscoplastic model is proposed. This methodology is validated together with a particle-based discretization (OTM) with three practical cases: a) the progression of a shear band, b) the effect of the velocity on the ultimate load of a footing and c) the failure of a vertical slope with a weak layer. 
+In this paper, we propose a methodology for evaluating the progression of a shear band or a weak layer through a phenomenological visco-plastic model, taking the benefits of a non-local failure approach. The proposed algorithm is based on the same principles of both Eigenerosion and Eigensoftening approaches, which have been widely employed through Material point-based frameworks in order to assess the fracture evolution in quasi brittle materials (\cite{Navas2018a}, \cite{Molinos2020b}) once specific energy (eigenerosion) or stress (eigensoftening) thresholds are reached when the material point fails. Within the aforementioned algorithms, the failure can be modeled instantaneously (eigenerosion) or following a material-dependent softening law (eigensoftening). In order to achieve a diffuse failure through the degradation of the material, a combination of these algorithms within a Perzyna-type visco-plastic model is proposed. This methodology is validated together with a particle-based discretization (OTM) with three practical cases: a) the progression of a shear band, b) the effect of the velocity on the ultimate load of a footing and c) the failure of a vertical slope with a weak layer. 
 
-Therefore, with the aim of verifying the good performance of the aforementioned algorithm, the rest of the paper is organized as follows. In section 2, the constitutive model with all its ingredients (rate dependent plasticity and non-local failure procedure) is presented; in section 3, time and spatial discretizations are outlined; in section 4, several applications are depicted; and, finally, conclusions are provided in section 5.
+Therefore, with the aim of verifying the good performance of the aforementioned algorithm, the rest of the paper is organized as follows; in section 2, the constitutive model with all its ingredients (rate dependent plasticity and non-local failure procedure) is presented; in section 3, time and spatial discretizations are outlined; in section 4, several applications are depicted; and, finally, the derived conclusions are provided in section 5.
 
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -195,26 +195,26 @@ Therefore, with the aim of verifying the good performance of the aforementioned 
 
 
 \subsection{Rate dependent plasticity}
-Along with the mathematical and numerical models described so far, it is essential to choose an appropriate constitutive model for the materials. It has been studied how soft clays suffer a viscous phenomenon and delayed deformation due to creep behavior (\cite{Bjerrum1967}).
-The concept of the viscoplastic model described in this section and used in the further simulations is based on Perzyna’s theory~\cite{Perzyna:66}. Perzyna’s theory is a modification of classical plasticity, wherein viscous-like behavior is introduced by a time-rate flow rule employing a dynamic plasticity yield function. Similar to the rate-independent theory, the strain rate is decomposed into an elastic and a viscoplastic strain rate:
+Along with the mathematical and numerical models described so far, it is essential to choose an appropriate constitutive model for the materials. The mechanisms through which soft clays display a viscous phenomenon and delayed deformation due to creep have been extensively studied in the past (\cite{Bjerrum1967}).
+The concept of the visco-plastic model described in this section and used in the further simulations is based on Perzyna’s theory~\cite{Perzyna:66}, which is a modification of the classical plasticity, wherein viscous-like behavior is introduced by a time-rate flow rule employing a dynamic plasticity yield function. Similar to the rate-independent theory, the strain rate is decomposed into an elastic and a visco-plastic strain rate:
 
 \begin{equation}
 \dot{\boldsymbol{\varepsilon}}=\dot{\boldsymbol{\varepsilon}}^{\mathrm{e}}+\dot{\boldsymbol{\varepsilon}}^{\mathrm{vp}}
 \end{equation}
 
-The stress rate tensor $\boldsymbol{\dot{\sigma}}$ is related to the elastic strain rate via a constitutive tensor $\boldsymbol{D}_{e}$, which is constant in the case of linear elasticity and variable (stress dependent) in the case of hypo or hyperelasticity:
+The stress rate tensor $\boldsymbol{\dot{\sigma}}$ is related to the elastic strain rate via a constitutive tensor $\boldsymbol{D}_{e}$, which is constant in the case of linear elasticity and variable (stress-dependent) in the case of hypo or hyperelasticity:
 
 \begin{equation}
 \dot{\sigma}=\mathbf{D}_{e}\left(\dot{\varepsilon}-\dot{\varepsilon}^{v p}\right)
 \end{equation}
 
-In the theory proposed by Perzyna~\cite{Perzyna:66}, and later modified by Souza-Neto \textit{et al.}~\cite{DPOwen2005}, the viscoplastic strain rate is defined in a similar fashion as in the rate independent plasticity theory:
+In the theory proposed by Perzyna~\cite{Perzyna:66}, and later modified by Souza-Neto \textit{et al.}~\cite{DPOwen2005}, the visco-plastic strain rate is defined in a similar fashion as in the rate independent plasticity theory:
 
 \begin{equation}
 \dot{\boldsymbol{\varepsilon}}^{\mathrm{vp}}=\langle \dot{\lambda}\rangle \frac{\partial g}{\partial \boldsymbol{\sigma}}
 \end{equation}
 
-where  $\langle \dot{\lambda}\rangle$ is the viscous flow function, which represents the current magnitude of viscoplastic strain rate. $g$ denotes the viscoplastic potential function and $f$ any valid plasticity function playing the role of loading surface. A von Mises yield surface, with a degradation curve for the undrained shear strength, has been adopted for the failure criteria. Associative flow is invoked by $f=g . \frac{\partial g}{\partial \sigma}$ that represents the current direction of the viscoplastic strain rate. The viscous flow function is defined by:
+where  $\langle \dot{\lambda}\rangle$ is the viscous flow function, representing the current magnitude of visco-plastic strain rate; $g$ denotes the visco-plastic potential function and $f$ is any valid plasticity function playing the role of loading surface. A von Mises yield surface, with a degradation curve for the undrained shear strength, has been adopted for the failure criteria. Associative flow is invoked by $f=g . \frac{\partial g}{\partial \sigma}$ that represents the current direction of the visco-plastic strain rate. The viscous flow function is defined by:
 
 \begin{equation}
 \langle \dot{\lambda}\rangle=\left\{\begin{array}{cl}\gamma\left[\left(\frac{q}{\sigma_y}\right)^\alpha-1\right] & , \phi>0 \\ 0 & , \phi \leq 0\end{array}\right. ,
@@ -233,7 +233,7 @@ where $q$ is the deviatoric stress invariant and $\sigma_y$ is defined by the de
 \left[\varepsilon_{n}, \varepsilon_{n}^{v p}, \sigma_{n}, \kappa_{n}\right]
 \end{equation}
 
-(namely total strain, viscoplastic strain, stress and a scalar internal variable that characterizes the size of the loading surface for the purpose of introducing hardening or softening behavior) to calculate the corresponding values at time 
+(namely total strain, visco-plastic strain, stress and a scalar internal variable that characterizes the size of the loading surface for the purpose of introducing hardening or softening behavior) to calculate the corresponding values at time 
 
 \begin{equation}
 t_{n+1}=t_{n}+\Delta t:\left[\varepsilon_{n+1}, \varepsilon_{n+1}^{v p}, \sigma_{n+1}, \kappa_{n+1}\right].
@@ -247,12 +247,12 @@ Indeed, this process has been carried out in an incremental way, being calculate
 \end{eqnarray}
 
 
-Therefore, the key feature of the stress updates is characterized by estimating the incremental viscoplatic strain $\Delta \varepsilon^{v p}.$ Details of the numerical implementation can be found in the textbooks (Owen and Hinton, 1986~\cite{Owen1981}; De Souza Neto $et al.$, 2008~\cite{DPOwen2005}). It has to be noticed also that for softening problems the viscoplasticity approach has a regularizing effect in the sense that the initial-value problem remains well-posed avoiding instability due to strain and strain-rate softening (Wang $et al.$~\cite{Wang:1997}.
+Therefore, the key feature of the stress updates is characterized by estimating the incremental viscoplatic strain $\Delta \varepsilon^{v p}.$ Details of the numerical implementation can be found in the textbooks (such as Owen and Hinton, 1986~\cite{Owen1981}; De Souza Neto $et al.$, 2008~\cite{DPOwen2005}). It has to be noticed also that, for softening problems, the visco-plastic approach has a regularizing effect in the sense that the initial-value problem remains well-posed, avoiding instability due to strain and strain-rate softening (Wang $et al.$~\cite{Wang:1997}.
 
 
-\subsection{Eigenerosion and Eigensoftening algorithms}
+\subsection{Eigenerosion and eigensoftening algorithms}
 
-Within the context of OTM formulation, fracture can be modeled simply by eroding material points according to an energy-release criterion or stress criterion depending on whether the eigenerosion~\cite{schmidt09, Pandolfi_12, Li_12, Pandolfi_13} or the eigensoftening~\cite{Navas2018a,Yu2018,Molinos2020b} algorithm is adopted respectively. In both methodologies, when the material points are failed, they are neglected from the computation of stresses in the model, which approximates the presence of cracks. However, the way to reach the zero stiffness state is different for each model: meanwhile in the eigenerosion the failure is instantaneous, in the eigensoftening the material follows a softening curve which depends on the material. It needs to be pointed out that when a material point satisfies the erosion condition, its contribution to the internal force vector and to the material stiffness matrix is set to zero, but its contribution to the mass matrix is maintained. The mass of a material point is discarded only when an eroded material point is not connected to any nodes.
+Within the context of the OTM formulation, fracture can be modeled simply by eroding material points according to an energy-release or stress criteria, depending on whether the eigenerosion~\cite{schmidt09, Pandolfi_12, Li_12, Pandolfi_13} or the eigensoftening~\cite{Navas2018a,Yu2018,Molinos2020b} algorithm are respectively adopted. In both methodologies, when the material points are failed, they are neglected from the computation of stresses in the model, which approximates the presence of cracks. However, the way to reach the zero stiffness state is different for each model: meanwhile in the eigenerosion the failure is instantaneous, in the eigensoftening the material follows a softening curve which depends on the material. It needs to be pointed out that when a material point satisfies the erosion condition, its contribution to the internal force vector and to the material stiffness matrix is set to zero, but its contribution to the mass matrix is maintained. The mass of a material point is discarded only when an eroded material point is not connected to any nodes.
 
 Next we compute the energy-release rate attendant to the failure of the material point $p$, the starting point of the aforementioned methodologies:
 \begin{eqnarray}
@@ -261,7 +261,7 @@ m_{p,k+1}&=&\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q\label{eq10},
 \end{eqnarray}
 where $B_\epsilon (x_{p,k+1})$ is the sphere of radius $\epsilon$ centered at $x_{p,k+1}$ known as the $\epsilon$-neighborhood of the material point, $m_{p,k+1}$ is the mass of the neighborhood at loading step $k+1$, $W_k(F_{q,k+1})$ is the current free-energy density per unit mass at the material point $x_{q, k+1}$ and $C$ is a normalizing constant, which ranges from 1 to 2, in order to extend the influence from the first line of neighbors to the second \cite{schmidt09,Pandolfi_12}.
 
-The material point is failed when $G_{p,k+1} $ surpasses a critical energy release rate that measures the material-specific energy, $G_F$, required to create a fracture surface of unit area. In calculations, the failed material-point set is updated at every time step according to  this criterion. For linear elasticity, Schmidt \textit{et al}.~\cite{schmidt09} have shown that this approximation converges to Griffith fracture in the limit of an infinitely fine discretization. 
+The material point is failed when $G_{p,k+1} $ surpasses a critical energy release rate that measures the material-specific energy, $G_F$, required to create a fracture surface of unit area. In the calculations, the failed material-point set is updated at every time step according to this criterion. For linear elasticity, Schmidt \textit{et al}.~\cite{schmidt09} have shown that this approximation converges to Griffith fracture in the limit of an infinitely fine discretization. 
 Indeed, erosion schemes that estimate the energy-release rate based on the energy of a single material point suffer from mesh-dependency and may overestimate the toughness of the material.
 
 A scheme of the configuration of the $\epsilon$-neighborhood is plotted in Fig.~\ref{fig3}.
@@ -274,7 +274,7 @@ A scheme of the configuration of the $\epsilon$-neighborhood is plotted in Fig.~
 \end{figure}
 %%%%%%
 
-On the other hand, the implementation of the eigensoftening algorithm consists in adopting a strength criterion for crack initiation and a softening law which is proper to the material under study before the formation of a stress-free crack. This second process tends to accumulate less energy until the crack. When the maximum tensile strength, $f_t$, is reached, a cohesive crack is formed with zero opening displacement. Once the opening displacement, $w$, reaches a critical vale, $w_c$, a stress-free crack is attained. The energy below the softening curve represents the static fracture energy per unit of area, $G_F$, which is sketched in Fig.~\ref{fig_GF}.
+On the other hand, the implementation of the eigensoftening algorithm consists in adopting a strength criterion for crack initiation and a softening law which is proper to the material under study before the formation of a stress-free crack. This second process tends to accumulate less energy until the crack appears. When the maximum tensile strength, $f_t$, is reached, a cohesive crack is formed with zero opening displacement. Once the opening displacement, $w$, reaches a critical vale, $w_c$, a stress-free crack is attained. The energy below the softening curve represents the static fracture energy per unit of area, $G_F$, which is sketched in Fig.~\ref{fig_GF}, \cite{Navas2018a}.
 %%%%%%
 \begin{figure}
 \centering
@@ -306,7 +306,7 @@ When $\sigma^{\epsilon}_{p,k+1}$ surpasses the tensile strength, $f_t$,  the sof
 \end{equation}
 
 \subsection{Eigendegradation model}
-Following the work of Einav and Randolph~\cite{Zhang2015}, and the later implementations of Zhang~\textit{et al.}~\cite{Zhang2015} (similar also of some other implementations~\cite{Wang21,Singh21}), the behavior of sensitive clays can be modeled by strain softening curves in order to reduce the strength of the material by a degradation obtained by accumulation of strain. Einav and Randolph assumed that the current shear strength depends on the accumulated absolute shear strain, $\xi$, which is taken as a state variable from which an isotropic strength reduction, $\delta(\xi)$, is calculated as
+Following the work of Einav and Randolph~\cite{Zhang2015}, and the later implementations by Zhang~\textit{et al.}~\cite{Zhang2015} (similar also of some other implementations~\cite{Wang21,Singh21}), the behavior of sensitive clays can be modeled by strain softening curves in order to reduce the strength of the material by a degradation related to the accumulation of strain. Einav and Randolph assumed that the current shear strength depends on the accumulated absolute shear strain, $\xi$, which is taken as a state variable from which an isotropic strength reduction, $\delta(\xi)$, is calculated as
 
 \begin{equation} \label{eq16}
 \delta(\xi)=s_{u} / s_{u i}=\delta_{\mathrm{rem}}+\left(1-\delta_{\mathrm{rem}}\right) \mathrm{e}^{-3 \xi / \xi_{95}}
@@ -316,25 +316,25 @@ where
 \xi=\int_{t}\left|\dot{\gamma}_{\max }\right| \mathrm{d} t
 \end{equation}
 
-and $\left|\dot{\gamma}_{\max }\right|$ is the cumulative absolute shear strain, $s_{u}$ and $s_{u i}$ are the softened strength and initial strength, respectively, $\delta_{\text {rem }}$ is the fully remolded strength ratio, and $\xi_{95}$ is the cumulative shear strain required to cause $95 \%$ reduction (from peak to remolded). The assumption is that $\delta_{\text {rem }}$ may be taken as the inverse of the sensitivity of the soil, while an appropriate value for $\xi_{95}$ must be deduced from laboratory test data, or by conducting cyclic penetration and extraction tests with T-bar or ball.
+and $\left|\dot{\gamma}_{\max }\right|$ is the cumulative absolute shear strain, $s_{u}$ and $s_{u i}$ are the softened strength and initial strength, respectively. In the above equations, $\delta_{\text {rem }}$ is the fully remolded strength ratio, and $\xi_{95}$ is the cumulative shear strain required to cause $95 \%$ reduction (from peak to remolded). The assumption is that $\delta_{\text {rem }}$ may be taken as the inverse of the sensitivity of the soil, while an appropriate value for $\xi_{95}$ must be deduced from laboratory test data, or by conducting cyclic penetration and extraction tests with T-bar or ball.
 
-The calculation of the cumulative shear strain can be achieved by the eigendeformation technique, departing from Eq.~\eqref{eq_Wp_1}, and considering, for the Eigendegradation calculation, that the stress remains constant in a neighborhood $\epsilon$. Thus, Eq.~\eqref{eq_Wp_1} can be simplified as
+The calculation of the cumulative shear strain can be achieved by the eigendeformation technique, departing from Eq.~\eqref{eq_Wp_1}, and considering that, for the calculation of the eigendegradation, that the stress remains constant in a neighborhood $\epsilon$. Thus, Eq.~\eqref{eq_Wp_1} can be simplified as
 
 \begin{equation}\label{eq_Wp_4}
 \delta W^\epsilon_{p}=\frac{\delta \tau_p} {m_{p}} \sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})} m_q \gamma_{q},
 \end{equation}
 
-being $\delta \tau_p$ the increment of tangential stress of the neighborhood and $\gamma^{\epsilon}_{p}$ the current local shear strain, calculated as:
+where $\delta \tau_p$ refers to the increment of tangential stress of the neighborhood and $\gamma^{\epsilon}_{p}$ the current local shear strain, obtained as:
 
 \begin{equation}\label{eq_Wp_5}
 \gamma^{\epsilon}_{p}=\frac{1}{m_{p}}\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q \gamma_{q}
 \end{equation}
 
-Similarly, in the neighborhood $\epsilon$, the non-local cumulative strain of a material point $p$ is calculated, only when plasticity is activated, as follows:
+Similarly, in the neighborhood $\epsilon$, the non-local cumulative strain of a material point $p$ is calculated only when plasticity is activated, as follows:
 \begin{equation}\label{eq18}
 \xi^{\epsilon}_{p}=\int^{t_{k+1}}_{t_{p0}}\left|\dot{\gamma^{\epsilon}_{p}}\right| \mathrm{d} t
 \end{equation}
-being $t_{k+1}$ referred to the current step and $t_{p0}$ to the step when plasticity begins. 
+where $t_{k+1}$ refers to the current step, and $t_{p0}$, to the step when plasticity begins. 
 
 Considering only shear failure, yield shear stress $\tau$ is equivalent to the softened strength, $s_u$, and the residual yield shear stress, $\tau_{95}$, can be reached by $\tau_{95}=\tau{rem}=s_{ui} \, \delta_{rem}$. Thus, in every state of degradation, the current yield shear stress, referred to the epsilon neighborhood, $\tau^{\epsilon}$, reads:
 
@@ -342,7 +342,7 @@ Considering only shear failure, yield shear stress $\tau$ is equivalent to the s
 \tau^{\epsilon}=\tau_{95}+\left(\tau_{i}-\tau_{95}\right) \mathrm{e}^{-3 \xi^{\epsilon}_{p} / \xi_{95}}
 \end{equation}
 
-It is remarkable that, in laboratory, parameter $\xi_{95}$ is not obtained. Instead, the displacement $\delta_{95}$ is achieves. In Fig.~\ref{fig_deg}.A) the degradation of the strength in terms of the displacement is plotted.
+It is remarkable that, in the laboratory, the parameter $\xi_{95}$ is not obtained. Instead, the displacement $\delta_{95}$ is achieved. In Fig.~\ref{fig_deg}.A) the degradation of the strength in terms of the displacement is plotted.
 %%%
 \begin{figure}
 \centering
@@ -351,7 +351,7 @@ It is remarkable that, in laboratory, parameter $\xi_{95}$ is not obtained. Inst
 \label{fig_deg}
 \end{figure}
 %%%
- It can be seen how this law can be translated to the shear strain measurement (Fig.~\ref{fig_deg}.B) by multiplying by $\epsilon$, which, in this problem, is considered as the sliding length. Depending on the size of the soft layer, this parameter $\epsilon$ is obtained as the minimum length between the neighbor radius and the size of the soft layer (See Fig.~\ref{fig_layer}) as follows:
+ It can be seen how this law can be translated to the shear strain measurement (Fig.~\ref{fig_deg}.B) by multiplying by $\epsilon$, which, in this problem, is considered as the sliding length. Depending on the size of the soft layer, this parameter $\epsilon$ is obtained as the minimum length between the neighbor radius, \cite{Navas2018a}, and the size of the soft layer (See Fig.~\ref{fig_layer}) as follows:
  \begin{equation} \label{eq20}
 2\epsilon = \min(h_s,2C_\epsilon h)
 \end{equation}
@@ -429,7 +429,7 @@ $
 \textbf{4. Yield condition}: $\Delta\lambda=0$\\
 \IF {$\phi= q^{trial}_{k+1} -\sigma_y \leq 0$} Elastic region: $\quad \boldsymbol{\sigma}_{k+1}=\boldsymbol{\sigma}^{trial}_{k+1}$
 \vspace{0.3cm}
-\ELSE    $\quad$  Viscoplastic flow:
+\ELSE    $\quad$  visco-plastic flow:
 \begin{itemize}
 \item\textbf{4.1} Derivative of the yield surface:
 \begin{equation}
@@ -549,13 +549,13 @@ and $i$ depicts the iteration index. The iteration finishes when  $\boldsymbol {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Applications}
 \label{S4}
-Three tests have been studied in this research. The two first applications are devoted to show the performance of the two main principal properties of the proposed constitutive model: the degradation (Shear test, Sec.~\ref{S41}) and the viscous behavior (Strip footing load, Sec.~\ref{S42}). The last example shows the suitability of the model when the triggering and propagation of a slope due to cyclic loading is sought.
+The previously described methodology has been applied to three examples in this paper. The two first of them are devoted to show the performance of the two main principal properties of the proposed constitutive model: the degradation (Shear test, Sec.~\ref{S41}) and the viscous behavior (Strip footing load, Sec.~\ref{S42}). The last example shows the suitability of the model when the triggering and propagation of a slope due to cyclic loading is sought.
 
 \subsection{Shear test}
 \label{S41}
-In the first example, the behavior of a weak layer under a shear test is analyzed. In Fig.~\ref{fig_geoshear} an embankment of 10 meters of depth is presented. A weak layer in the bottom of the domain of 0.5 meters appears. The proposed shear test is similar to the one proposed by Zhang \textit{et al.} \cite{Zhang2015}. Although different constitutive laws are employed (local and non-local), since both are based on similar degradation processes, it is expected to obtain comparable results.
+In the first example, the behavior of a weak layer under a shear test is analyzed. In Fig.~\ref{fig_geoshear} an embankment of 10 meters of depth is presented. A weak layer in the bottom of the domain of 0.5 meters appears. The proposed shear test is similar to the one proposed by Zhang \textit{et al.} \cite{Zhang2015}. Although different constitutive laws are employed (local and non-local), it is expected to obtain comparable results since both laws are based on similar degradation processes.
 
-The original embankment's length is 700 m. Since the softened zone only extends 90 m. and considering infinite conditions at both sides of this softened zone, only this 90 m. are modeled in order to save computational time. Unlike the original example, gravity conditions are neglected, considering the failure of the embankment at the final  of the residual strength. Thus, the parameters needed in this example are shown in Table~\ref{tab2}. It is important to point out that, in this research, the proposed non-local degradation model has been employed with a neighborhood parameter, $C_epsilon$, of 1.5. This is an important difference with the model proposed for the original example, which evaluates the degradation locally in an Arbitrary Eulerian-Lagrangian (ALE) configuration.
+The original embankment's length is 700 m. Since the softened zone only extends 90 m and considering infinite conditions at both sides of this softened zone, only this 90 m are modeled in order to save computational effort. Unlike the original example, gravity conditions are neglected, considering the failure of the embankment at the final  of the residual strength. Thus, the parameters needed in this example are shown in Table~\ref{tab2}. It is important to point out that, in this research, the proposed non-local degradation model has been employed with a neighborhood parameter, $C_epsilon$, of 1.5. This is an important difference with respect to the model proposed for the original example, which evaluates the degradation locally in an Arbitrary Eulerian-Lagrangian (ALE) configuration.
 
 \begin{table}
 \caption{\label{tab2} Parameters for the shear degradation analysis.} 
@@ -600,8 +600,8 @@ Results obtained in this research and the ones obtained by Zhang \textit{et al.}
 
 \subsection{Strip footing load}
 \label{S42}
-Following, the behavior of the soil under different loading rates of a strip footing is analyzed. Similarly, the viscous properties of the soil are varied in order to extend the analysis to the behavior of the soil. This classic problem has been extensively used to verify the solutions provided by numerical models under viscoplastic conditions. The two main features to assess are the mechanism of failure and the behavior of the reaction forces at different viscoplastic scenarios. These results have been previously presented in the work of Pastor and coworkers \cite{BlancPastor2012,Navas2018}, where the loading is applied as an incremental velocity downwards at the base of the strip footing. In the present research, the loading is applied as a negative displacement according to the following expression: $$u_y=u_f\left(t/t_f\right)^2,$$ 
-where $u_f=0.04$~m. and $t_f=4$~s. The geometry and soil parameters can be seen in Fig.\ref{fig_geozap}. Parameters of the Eigendegradation algorithm are also depicted. Opposite to the previous application, in this case there is no weak layer, acting the whole domain as a viscoplastic degradable soil.
+Following, the behavior of the soil under different loading rates of a strip footing is analyzed. Similarly, the viscous properties of the soil are varied in order to extend the analysis to the behavior of the soil. This classic problem has been extensively used to verify the solutions provided by numerical models under visco-plastic conditions. The two main features to assess are the mechanism of failure and the behavior of the reaction forces at different visco-plastic scenarios. These results have been previously presented in the work of Pastor and coworkers \cite{BlancPastor2012,Navas2018}, where the loading is applied as an incremental velocity downwards at the base of the strip footing. In the present research, the loading is applied as a negative displacement according to the following expression: $$u_y=u_f\left(t/t_f\right)^2,$$ 
+where $u_f=0.04$~m. and $t_f=4$~s. The geometry and soil parameters can be seen in Fig.\ref{fig_geozap}. Parameters of the Eigendegradation algorithm are also depicted. Opposite to the previous application, in this case there is no weak layer, acting the whole domain as a visco-plastic degradable soil.
 
 %%%%%
 \begin{figure}[!t]
@@ -627,7 +627,7 @@ In order to verify the performance of the full model, different viscous paramete
 \begin{figure}
 \begin{center}
 \includegraphics[width=11cm]{Figs/visco_d.pdf}\\
-\caption{Obtained reaction with different $\mu$ values for the problem of the strip footing using viscoplastic von Mises law. The dashed line represents the pseudo-static behavior.}
+\caption{Obtained reaction with different $\mu$ values for the problem of the strip footing using visco-plastic von Mises law. The dashed line represents the pseudo-static behavior.}
 \label{visco}
 \end{center}
 \end{figure}
@@ -637,13 +637,13 @@ Similarly, depending on the loading rate, the material can get stiffer and provi
 \begin{figure}
 \begin{center}
 \includegraphics[width=11cm]{Figs/visco_t.pdf}\\
-\caption{Obtained reaction with different loading rates for the problem of the strip footing using viscoplastic von Mises law, being $t_f$ the final time of the application of the load. The dashed line represents the pseudo-static behavior.}
+\caption{Obtained reaction with different loading rates for the problem of the strip footing using visco-plastic von Mises law, being $t_f$ the final time of the application of the load. The dashed line represents the pseudo-static behavior.}
 \label{visco2}
 \end{center}
 \end{figure}
 
 \subsection{Vertical cut}
-This final application allows understanding the potentiality of the proposed methodology. A weak layer is supposed in a soil with a vertical cut on the left side. This weak layer is located forming a 45$^\circ$ angle, as it is sketched in Fig.~\ref{fig_VC1}. This layer, whose thick is 1 meter, will be considered plastic. Von Mises yield surface is employed, being its degradation modeled through both \emph{Eigendegradation} and traditional softening, in order to assess the performance of the first one against the latter. Out of the weak layer, the soil is considered elastic since its failure is far from the failure of the weak layer. Parameters of both models are presented in the right part of Fig.~\ref{fig_VC1}. In the traditional softening model, no Eigendegradation parameters are needed. Instead, a negative hardening of 200 kPa is employed. This parameter is not employed in the Eigendegradation simulation.
+This final application allows understanding the potentiality of the proposed methodology. A weak layer is supposed in a soil with a vertical cut on the left side (Fig.~\ref{fig_VC1}). This weak layer is located forming a 45$^\circ$ angle. This layer, the thick of which is 1 m, will be considered as plastic. Von Mises yield surface is employed, being its degradation modeled through both \emph{eigendegradation} and traditional softening, in order to assess the performance of the former one compared with the latter. Out of the weak layer, the soil is considered elastic since its failure is far from the failure of the weak layer. Parameters of both models are presented in the right part of Fig.~\ref{fig_VC1}. In the traditional softening model, no Eigendegradation parameters are needed. Instead, a negative hardening of 200 kPa is employed. This parameter is not employed in the Eigendegradation simulation.
 
 The soil can be considered infinite on the right and on the bottom of the model; thus, any movement in these directions is prevented. The 12 first meters are modeled for the sake of simplicity.
 
@@ -701,17 +701,17 @@ Finally, in Fig.~\ref{fig_VC4}, the distribution of the equivalent plastic strai
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
 
-A visco-plastic degradation model has been proposed in order to simulate the behavior of layers of soft clays. The non-local performance of the proposed algorithm has been carried out following concepts of non-local meshfree models capable to reproduce both brittle (Eigenerosion) and quasi-brittle (Eigensoftening) behaviors. Thus, the proposed algorithm takes the name of \textit{Eigendegradation}.
+A new visco-plastic degradation model has been proposed in order to simulate the behavior of layers of soft clays. The main aim of this model is to eliminate the mesh dependence shown by other methodologies available in the literature. Taking benefits of the concept of eigendeformation, this model can reproduce both non-local and localized (shear bands) failures. The non-local performance of the proposed algorithm has been considered following concepts of non-local meshfree models capable to reproduce both brittle (eigenerosion) and quasi-brittle (eigensoftening) behaviors. Thus, the proposed algorithm takes the name of \textit{eigendegradation}.
 
-Two main properties defined the proposed constitutive model: softening due to degradation and visco-plastic behavior. Thus, two different examples are provided in order to validate both properties.
+Two main properties define the proposed constitutive model: softening due to degradation, and visco-plastic behavior. Thus, two different examples are provided in order to validate both properties.
 
 The first example reproduces a shear test of a soil with a thin soft layer. This test shows the performance of the degradation behavior from the beginning of the reduction of the shear strength to the final of this reduction, obtaining a residual strength. This result has been compared to other similar work of degradation of clays, obtaining very close curves,  what let us think the behavior of the proposed algorithm when modeling this material is correct.
 
-The second example studies the behavior of a soil loaded by a strip footing. In this case, the viscoplastic concept is the one to be assessed. Since the von Mises yield surface is employed, the traditional Prandtl mechanism is obtained. Moreover, a hardening behavior is observed either when the viscosity becomes higher or when the load is applied quicker. This example allows us to validate the viscous behavior, as well as to verify that the degradation acts as a softening of the material that helps to define clearer the shear bands formed in the plastic mechanism.
+The second example studies the behavior of a soil loaded by a strip footing. In this case, the visco-plastic concept is the one to be assessed. Since the von Mises yield surface is employed, the traditional Prandtl mechanism is obtained. Moreover, a hardening behavior is observed either when the viscosity becomes higher or when the load is applied quicker. This example allows us to validate the viscous behavior, as well as to verify that the degradation acts as a softening of the material that helps to define clearer the shear bands formed in the plastic mechanism.
 
-Finally, a vertical cut of soil is modeled. This soil contains a 45$^\circ$ soft layer. A compound load is applied, being the first part what makes the beginning of the degradation of the material and the last part the one that makes the whole degradation of the shear strength and the final failure of the slope. In comparison with a traditional softening law, the proposed one is capable to produce degradation with elastic accumulated strain, being able the accumulation by both loading or unloading conditions. This behavior is seen in many failures of these kinds of soft layers, where a load much lower than the critical one but held in the time produces the fatigue of the material and the final failure of the soil structure. 
+Finally, a vertical cut of soil is modeled. This soil contains a 45$^\circ$ soft layer. A compound load is applied, the first part being the one that causes the beginning of the degradation of the material and the last part, the one that causes the whole degradation of the shear strength and the final failure of the slope. In comparison with a traditional softening law, the proposed one is capable to produce degradation with elastic accumulated strain, with the accumulation under both loading or unloading conditions. This behavior is seen in many failures of this type of soft layers, where a load is much lower than the critical one, but it is held in time, causing the fatigue of the material and the final failure of the soil structure. 
 
-The present algorithm has performed successfully with the proposed applications. Further research can be made in order to be able to reproduce a wide range of problems. First of all, this model should be calibrated against experimental tests such as the shear test. Moreover, only the von Mises yield surface has been validated in this manuscript. Although it is able to reproduce the undrained conditions of the soil, more sophisticated yield surfaces, such as the Cam-Clay one, would improve the type of problems to be modeled. The soil should also be modeled as a biphase material, including the water in the formulation of the problem. Finally, some other spatial discretization, such as FEM or MPM, could be employed to assess the performance of this algorithm.
+The present algorithm has performed successfully with the proposed applications. Further research can be made in order to be able to reproduce a wide range of problems. First of all, this model should be calibrated against experimental tests such as the shear test. Moreover, only the von Mises yield surface has been validated in this manuscript. Although it is able to reproduce the undrained conditions of the soil, more sophisticated yield surfaces, such as the Cam-Clay one, would improve the type of problems to be mode-led. The soil should also be modeled as a bi-phase material, including the water in the formulation of the problem. Finally, some other spatial discretization, such as FEM or MPM, could be employed to assess the performance of this algorithm.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{6pt} 
@@ -761,6 +761,6 @@ ALE & Arbitrary Eulerian-Lagrangian
 %Reviewer 3 comments and authors’ response
 %}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{paracol}
+%\end{paracol}
 \end{document}
 
