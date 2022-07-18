@@ -195,45 +195,45 @@ Therefore, with the aim of verifying the good performance of the aforementioned 
 
 
 \subsection{Rate dependent plasticity}
-Along with the mathematical and numerical models described so far, it is essential to choose an appropriate constitutive model for the materials. The mechanisms through which soft clays display a viscous phenomenon and delayed deformation due to creep have been extensively studied in the past (\cite{Bjerrum1967}).
-The concept of the visco-plastic model described in this section and used in the further simulations is based on Perzyna’s theory~\cite{Perzyna:66}, which is a modification of the classical plasticity, wherein viscous-like behavior is introduced by a time-rate flow rule employing a dynamic plasticity yield function. Similar to the rate-independent theory, the strain rate is decomposed into an elastic and a visco-plastic strain rate:
+Apart from the mathematical and numerical models that will be described in section 3, it is essential to choose an appropriate constitutive model for the degradable soils. The mechanisms through which soft clays display a viscous phenomenon and delayed deformation because of the creep have been extensively studied in the past (\cite{Bjerrum1967}).
+The concept of the visco-plastic material outlined in this section and employed in the proposed simulations is based on Perzyna’s theory~\cite{Perzyna:66}, which is a modification of the classical plasticity, wherein viscous-like behavior is introduced by a time-rate flow rule thanks of a plastic yield function adapted to dynamic conditions. In a similar manner to the rate-independent theory, the strain rate is split into a visco-plastic strain rate and an elastic one:
 
 \begin{equation}
 \dot{\boldsymbol{\varepsilon}}=\dot{\boldsymbol{\varepsilon}}^{\mathrm{e}}+\dot{\boldsymbol{\varepsilon}}^{\mathrm{vp}}
 \end{equation}
 
-The stress rate tensor $\boldsymbol{\dot{\sigma}}$ is related to the elastic strain rate via a constitutive tensor $\boldsymbol{D}_{e}$, which is constant in the case of linear elasticity and variable (stress-dependent) in the case of hypo or hyperelasticity:
+The rate of the Cauchy's stress tensor, $\boldsymbol{\dot{\sigma}}$, is linked to the elastic strain rate through the constitutive tensor $\boldsymbol{D}_{e}$, which, in our case, is variable or stress-dependent due to the hyperelasticity and large strain theory.
 
 \begin{equation}
 \dot{\sigma}=\mathbf{D}_{e}\left(\dot{\varepsilon}-\dot{\varepsilon}^{v p}\right)
 \end{equation}
 
-In the theory proposed by Perzyna~\cite{Perzyna:66}, and later modified by Souza-Neto \textit{et al.}~\cite{DPOwen2005}, the visco-plastic strain rate is defined in a similar fashion as in the rate independent plasticity theory:
+In the model proposed by Perzyna~\cite{Perzyna:66}, and later modified by Souza-Neto \textit{et al.}~\cite{DPOwen2005}, the rate of the visco-plastic strain can be defined similarly than in the rate independent plasticity approach:
 
 \begin{equation}
 \dot{\boldsymbol{\varepsilon}}^{\mathrm{vp}}=\langle \dot{\lambda}\rangle \frac{\partial g}{\partial \boldsymbol{\sigma}}
 \end{equation}
 
-where  $\langle \dot{\lambda}\rangle$ is the viscous flow function, representing the current magnitude of visco-plastic strain rate; $g$ denotes the visco-plastic potential function and $f$ is any valid plasticity function playing the role of loading surface. A von Mises yield surface, with a degradation curve for the undrained shear strength, has been adopted for the failure criteria. Associative flow is invoked by $f=g . \frac{\partial g}{\partial \sigma}$ that represents the current direction of the visco-plastic strain rate. The viscous flow function is defined by:
+where  $\langle \dot{\lambda}\rangle$ is the function of the viscous flow, which denotes the current magnitude of visco-plastic strain rate; $g$ is represents the visco-plastic potential function and  $\frac{\partial g}{\partial \sigma}$ represents the current direction of the visco-plastic strain rate. The viscous flow function is defined by:
 
 \begin{equation}
 \langle \dot{\lambda}\rangle=\left\{\begin{array}{cl}\gamma\left[\left(\frac{q}{\sigma_y}\right)^\alpha-1\right] & , \phi>0 \\ 0 & , \phi \leq 0\end{array}\right. ,
 \end{equation}
 
 
-where $<>$ denotes Macauley brackets, $\gamma$ is the fluidity parameter (which is the reciprocal of viscosity) and $\alpha$ is a material constant. Function $\phi$ is defined as:
+where $<>$ denotes Macauley brackets, $\gamma$ is the fluidity parameter, also thought as the reciprocal of the viscosity, and $\alpha$ is a material constant. In this work, associative flow is invoked by $\phi=g$. $\phi$ is the plasticity function that plays the role of the loading surface; a von Mises $\phi=g$ function, with a degradation curve for the undrained shear strength, has been adopted for the plastic criteria. Function $\phi$ is defined as:
 
 \begin{equation}
 \phi=q-\sigma_y,
 \end{equation}
 
-where $q$ is the deviatoric stress invariant and $\sigma_y$ is defined by the degradation law which will be detailed later. Concerning algorithm aspects, in displacement-based finite element formulations, stress updates take place at the Gauss points for a known nodal displacement. We start from time $t_{n}$ with the known converged state: 
+where $q$ is the deviatoric stress invariant and $\sigma_y$ is defined by the degradation law, which will be detailed later. About algorithmic aspects, in displacement-based numerical methods, stress updates take place at the Gauss points (or Material points if material-based methodologies are adopted) for a known nodal displacement. Initial conditions, which are the ones from the last converged state,  depart from time $t_{n}$: 
 
 \begin{equation}
-\left[\varepsilon_{n}, \varepsilon_{n}^{v p}, \sigma_{n}, \kappa_{n}\right]
+\left[\varepsilon_{n}, \varepsilon_{n}^{v p}, \sigma_{n}, \kappa_{n}\right],
 \end{equation}
 
-(namely total strain, visco-plastic strain, stress and a scalar internal variable that characterizes the size of the loading surface for the purpose of introducing hardening or softening behavior) to calculate the corresponding values at time 
+being the variables: total strain, visco-plastic strain, stress and a scalar internal variable respectively. The latter characterizes the size of the yield surface as well as any other plastic aspect. The final goal is to calculate the corresponding values at time $n+1$ through:
 
 \begin{equation}
 t_{n+1}=t_{n}+\Delta t:\left[\varepsilon_{n+1}, \varepsilon_{n+1}^{v p}, \sigma_{n+1}, \kappa_{n+1}\right].
@@ -247,49 +247,48 @@ Indeed, this process has been carried out in an incremental way, being calculate
 \end{eqnarray}
 
 
-Therefore, the key feature of the stress updates is characterized by estimating the incremental viscoplatic strain $\Delta \varepsilon^{v p}.$ Details of the numerical implementation can be found in the textbooks (such as Owen and Hinton, 1986~\cite{Owen1981}; De Souza Neto $et al.$, 2008~\cite{DPOwen2005}). It has to be noticed also that, for softening problems, the visco-plastic approach has a regularizing effect in the sense that the initial-value problem remains well-posed, avoiding instability due to strain and strain-rate softening (Wang $et al.$~\cite{Wang:1997}.
+Thus, the main objective of the stress updates is to estimate the viscoplatic strain increment, $\Delta \varepsilon^{v p}.$ The numerical implementation of this calculation follows the textbooks of Owen and Hinton, 1986~\cite{Owen1981} and De Souza Neto $et al.$, 2008~\cite{DPOwen2005}). It has to be pointed out that the visco-plastic approach has a regularizing effect when softening behavior is to be modelled (Wang $et al.$~\cite{Wang:1997}) in since the initial-value problem remains well-posed, avoiding instability due to the suffered softening of strain and strain-rate.
 
 
 \subsection{Eigenerosion and eigensoftening algorithms}
 
-Within the context of the OTM formulation, fracture can be modeled simply by eroding material points according to an energy-release or stress criteria, depending on whether the eigenerosion~\cite{schmidt09, Pandolfi_12, Li_12, Pandolfi_13} or the eigensoftening~\cite{Navas2018a,Yu2018,Molinos2020b} algorithm are respectively adopted. In both methodologies, when the material points are failed, they are neglected from the computation of stresses in the model, which approximates the presence of cracks. However, the way to reach the zero stiffness state is different for each model: meanwhile in the eigenerosion the failure is instantaneous, in the eigensoftening the material follows a softening curve which depends on the material. It needs to be pointed out that when a material point satisfies the erosion condition, its contribution to the internal force vector and to the material stiffness matrix is set to zero, but its contribution to the mass matrix is maintained. The mass of a material point is discarded only when an eroded material point is not connected to any nodes.
+Within the context of the OTM formulation, fracture can be modeled simply by eroding material points according to an energy-release or stress criteria, depending on whether the eigenerosion~\cite{schmidt09, Pandolfi_12, Li_12, Pandolfi_13} or the eigensoftening~\cite{Navas2018a,Yu2018,Molinos2020b} algorithm are respectively adopted. In both methodologies, if the material points are failed, in order to approximate the presence of cracks, the material points can be extracted from the computation of stresses. However, the way to reach the zero stiffness state is different for each model: meanwhile in the eigenerosion the failure is instantaneous, in the eigensoftening the material follows a softening curve which depends on the material. It needs to be noticed that when a material point satisfies the failure condition, its contribution to the material stiffness matrix, as well as to the internal forces, is set to zero. However, it is necessary to maintain its contribution to the mass matrix in order to fulfill the mass conservation law.  We only can discard it if an eroded material point is finally unconnected to any other node.
 
-Next we compute the energy-release rate attendant to the failure of the material point $p$, the starting point of the aforementioned methodologies:
+Following, we compute the energy-release rate attendant to the failure of the material point $p$, the starting point of the aforementioned methodologies:
 \begin{eqnarray}
 G_{p,k+1}&=&\frac{C\epsilon}{m_{p,k+1}}\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_qW_k(F_{q,k+1}), \nonumber\\
 m_{p,k+1}&=&\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q\label{eq10},
 \end{eqnarray}
-where $B_\epsilon (x_{p,k+1})$ is the sphere of radius $\epsilon$ centered at $x_{p,k+1}$ known as the $\epsilon$-neighborhood of the material point, $m_{p,k+1}$ is the mass of the neighborhood at loading step $k+1$, $W_k(F_{q,k+1})$ is the current free-energy density per unit mass at the material point $x_{q, k+1}$ and $C$ is a normalizing constant, which ranges from 1 to 2, in order to extend the influence from the first line of neighbors to the second \cite{schmidt09,Pandolfi_12}.
+where $W_k(F_{q,k+1})$ is the free-energy density per unit mass at the material point $x_{q, k+1}$, $B_\epsilon (x_{p,k+1})$ is the $\epsilon$-neighborhood of the material point, calculated as the volume of $\epsilon$ size centered at the aforementioned $x_{p,k+1}$. $m_{p,k+1}$ is the mass of this neighborhood and $C$ is a normalizing constant, which ranges from 1 to 2, in order to extend the influence from the first line of neighbors to the second \cite{schmidt09,Pandolfi_12}. Everything is evaluated at the time step $k+1$. A scheme of the $\epsilon$-neighborhood and how it is configured is plotted in Fig.~\ref{fig3}.
 
-The material point is failed when $G_{p,k+1} $ surpasses a critical energy release rate that measures the material-specific energy, $G_F$, required to create a fracture surface of unit area. In the calculations, the failed material-point set is updated at every time step according to this criterion. For linear elasticity, Schmidt \textit{et al}.~\cite{schmidt09} have shown that this approximation converges to Griffith fracture in the limit of an infinitely fine discretization. 
-Indeed, erosion schemes that estimate the energy-release rate based on the energy of a single material point suffer from mesh-dependency and may overestimate the toughness of the material.
-
-A scheme of the configuration of the $\epsilon$-neighborhood is plotted in Fig.~\ref{fig3}.
 %%%%%%
 \begin{figure}
 \centering
 \includegraphics[width=0.44\textwidth]{Figs/eroded_neighbors_2.pdf}
-\caption{Scheme of a fractured layer (black dots) as set of failed material points, and of the $\epsilon$-neighborhood (inside the circle) of the material point located at the crack tip (gray dots).}
+\caption{Scheme of a set of fractured material points as a fractured layer (black dots) and the $\epsilon$-neighborhood of the points neighbors of the material point at the crack tip (gray dots).}
 \label{fig3}
 \end{figure}
 %%%%%%
 
-On the other hand, the implementation of the eigensoftening algorithm consists in adopting a strength criterion for crack initiation and a softening law which is proper to the material under study before the formation of a stress-free crack. This second process tends to accumulate less energy until the crack appears. When the maximum tensile strength, $f_t$, is reached, a cohesive crack is formed with zero opening displacement. Once the opening displacement, $w$, reaches a critical vale, $w_c$, a stress-free crack is attained. The energy below the softening curve represents the static fracture energy per unit of area, $G_F$, which is sketched in Fig.~\ref{fig_GF}, \cite{Navas2018a}.
+The material point is failed when the value of $G_{p,k+1}$ (Eq.~\eqref{eq10}) exceeds the critical energy release rate, $G_F$. This parameter estimates the specific energy required to create a fracture surface per unit of area. In the proposed algorithm, every time step the eroded (failed) material-point set updated taking into account this criterion. Schmidt \textit{et al}.~\cite{schmidt09} have demonstrated that, this approximation, converges to Griffith fracture for linear elasticity when an infinitely fine discretization is presumed. 
+Certainly, schemes that estimate the energy-release rate based on the energy of a single material point may suffer from an overestimation of the toughness of the material, as well as mesh-dependency if non-local approaches are adopted.
+
+On the other hand, the implementation of the eigensoftening algorithm consists in adopting a strength criterion for crack initiation and a law which is capable to reproduce a proper reduction of strength of the material under study before the formation of a stress-free crack, what is known as softening. This second process tends to accumulate less energy until the crack appears. When the tensile strength, $f_t$, is achieved, a crack is conformed with zero opening displacement. Because of its cohesive behavior, once the opening displacement, $w$, reaches a critical vale, $w_c$, a stress-free crack is attained. The energy below the softening curve represents the fracture energy per unit of area in static conditions, $G_F$, which is sketched in Fig.~\ref{fig_GF}, \cite{Navas2018a}.
 %%%%%%
 \begin{figure}
 \centering
 \includegraphics[width=0.44\textwidth]{Figs/GF.pdf}
-\caption{Scheme of a linear cohesive law, where the shade area is $G_F$, $f_t$ is the tensile strength,  and $w_c$  is the critical opening displacement.}
+\caption{Scheme of a cohesive law, where $f_t$ is the tensile strength, $w_c$  is the critical opening displacement and the shade area, calculated through  $f_t$ and $w_c$, is $G_F$.}
 \label{fig_GF}
 \end{figure}
 %%%%%%
-For the Eigensoftening calculation, Eq.~(\ref{eq10}) can be rewritten in terms of the principal stresses at time $t_{k+1}$, since this model employs the first principal stress as a failure criterion. Therefore, the variation of the averaged strain energy density in the $\epsilon$-neighborhood of the material point $x_{p, k+1}$ can be expressed as,
+For the Eigensoftening calculation, Eq.~(\ref{eq10}) can be rewritten in terms of the principal stresses at time $t_{k+1}$, since this model employs the first principal stress as a failure criterion. Therefore, the increment of the averaged density of the strain energy in a $\epsilon$-neighborhood of the material point $x_{p, k+1}$ may be calculated as,
 %%%%
 \begin{equation}\label{eq_Wp_1}
 \delta W^\epsilon_{p} = \frac{\partial G_{p}}{C\epsilon} = \frac{1}{m_{p}}\sum_{x_{q}\in B_\epsilon (x_{p})} m_{q} \sigma_{q,1} \delta \varepsilon_q,
 \end{equation}
 %%%
-where $\sigma_{q, 1}$ is the maximum principal stress at a neighboring material point $x_{q, k+1}$. Considering an effective strain $\varepsilon_q$ at the material point $x_{q, k+1}$, such that the variation of the local strain energy can be obtained as $\delta W_q = \sigma_{q, 1}\delta \varepsilon_q$, let assume the effective strain increment of each material point can be approximated by its counterpart in the neighborhood, being Eq.~(\ref{eq_Wp_1}) simplified as:
+being $\sigma_{q, 1}$ the maximum tensile stress (principal stress 1) at a material point $x_{q, k+1}$ from the neighborhood. Considering, for a material point $x_{q, k+1}$, an effective strain $\varepsilon_q$ such that the variation of the local strain energy can be calculated as $\delta W_q = \sigma_{q, 1}\delta \varepsilon_q$, let assume the effective strain increment can be approximated, for each material point, by its counterpart in the neighborhood, being Eq.~(\ref{eq_Wp_1}) simplified as:
 \begin{equation}\label{eq_Wp_3}
 \delta W^\epsilon_{p}=\frac{\delta \varepsilon_p} {m_{p}} \sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})} m_q \sigma_{q, 1}.
 \end{equation}
@@ -299,24 +298,24 @@ Thus, the equivalent critical stress at the material point $x_{p, k+1}$ is defin
 \sigma^{\epsilon}_{p}=\frac{1}{m_{p}}\sum_{x_{q,k+1}\in B_\epsilon (x_{p,k+1})}m_q \sigma_{q, 1}
 \end{equation}
 
-When $\sigma^{\epsilon}_{p,k+1}$ surpasses the tensile strength, $f_t$,  the softening behavior is activated through the damage variable $\chi$, which ranges between zero (an intact material) and one (completely failed material points). Of course, $\chi$ depends on the current and critical opening measures, $w$ and $w_c$ respectively.  The latter is a material parameter, but the first one has to be measured in terms of the achieved strain and a length of affection called band width, $h_\epsilon$, equivalent to the crack band model of Ba\v{z}ant~\cite{Bazant83}. It bears emphasis that  a reference value for $h^{\epsilon}$ is between two and four times the maximum size of the aggregates for concrete according to Ba\v{z}ant~\cite{Bazant98}. Thus, this is a material parameter more than a numerical artifact. The relationship between strain and crack opening depends on the effective fracture strain, $\varepsilon^{\epsilon}_f$, defined as the difference between the strain at crack initiation, $\varepsilon_1(x_{p,0})$, and the current strain, $ \varepsilon_1(x_{p,k+1})$ for a material point $p$; and the band width as:
+When $\sigma^{\epsilon}_{p,k+1}$ surpasses the tensile strength, $f_t$,  the softening behavior is activated through the damage variable $\chi$, which ranges between zero (an intact material) and one (completely failed material points). Of course, $\chi$ depends on the current and critical opening measures, $w$ and $w_c$ respectively.  The latter is a material parameter, but the first one has to be measured in terms of the achieved strain and a length of affection called band width, $h_\epsilon$, equivalent to the crack band model of Ba\v{z}ant~\cite{Bazant83}. It must be pointed out that, according to Ba\v{z}ant~\cite{Bazant98}, the reference value for $h^{\epsilon}$ ranges between two and four times the maximum size of the aggregates for concrete. Thus, this is a material parameter more than a numerical artifact. The relationship between strain and crack opening depends on the effective fracture strain, $\varepsilon^{\epsilon}_f$, defined as the difference between the strain at crack initiation, $\varepsilon_1(x_{p,0})$, and the current strain, $ \varepsilon_1(x_{p,k+1})$ for a material point $p$; and the band width as:
 
 \begin{equation} \label{eq15}
  \varepsilon_f^{\epsilon} = \varepsilon_1(x_{p,k+1}) - \varepsilon_1(x_{p,0})  =  \frac{w}{h^{\epsilon}}
 \end{equation}
 
 \subsection{Eigendegradation model}
-Following the work of Einav and Randolph~\cite{Zhang2015}, and the later implementations by Zhang~\textit{et al.}~\cite{Zhang2015} (similar also of some other implementations~\cite{Wang21,Singh21}), the behavior of sensitive clays can be modeled by strain softening curves in order to reduce the strength of the material by a degradation related to the accumulation of strain. Einav and Randolph assumed that the current shear strength depends on the accumulated absolute shear strain, $\xi$, which is taken as a state variable from which an isotropic strength reduction, $\delta(\xi)$, is calculated as
+Following the work of Einav and Randolph~\cite{Zhang2015}, and the later implementations by Zhang~\textit{et al.}~\cite{Zhang2015} (similar also of some other implementations~\cite{Wang21,Singh21}), the behavior of sensitive clays can be modeled by strain softening curves in order to reduce the strength of the material by a degradation related to the accumulation of strain. Einav and Randolph assumed that the current shear strength depends on the accumulated absolute shear strain, $\xi$, which is assumed as a state variable in order to calculate the isotropic strength reduction, $\delta(\xi)$, as:
 
 \begin{equation} \label{eq16}
-\delta(\xi)=s_{u} / s_{u i}=\delta_{\mathrm{rem}}+\left(1-\delta_{\mathrm{rem}}\right) \mathrm{e}^{-3 \xi / \xi_{95}}
+\delta(\xi)=s_{u} / s_{u i}=\delta_{\mathrm{rem}}+\left(1-\delta_{\mathrm{rem}}\right) \mathrm{e}^{-3 \xi / \xi_{95}},
 \end{equation}
 where
 \begin{equation}\label{eq17}
 \xi=\int_{t}\left|\dot{\gamma}_{\max }\right| \mathrm{d} t
 \end{equation}
 
-and $\left|\dot{\gamma}_{\max }\right|$ is the cumulative absolute shear strain, $s_{u}$ and $s_{u i}$ are the softened strength and initial strength, respectively. In the above equations, $\delta_{\text {rem }}$ is the fully remolded strength ratio, and $\xi_{95}$ is the cumulative shear strain required to cause $95 \%$ reduction (from peak to remolded). The assumption is that $\delta_{\text {rem }}$ may be taken as the inverse of the sensitivity of the soil, while an appropriate value for $\xi_{95}$ must be deduced from laboratory test data, or by conducting cyclic penetration and extraction tests with T-bar or ball.
+and $\left|\dot{\gamma}_{\max }\right|$ represents the cumulative absolute shear strain. $s_{u}$ and $s_{u i}$ are considered the softened strength and initial strength, respectively. In the above equations, $\delta_{\text {rem }}$ is the fully remolded strength ratio, and $\xi_{95}$ is the cumulative shear strain required to cause $95 \%$ reduction from the peak to fully remolded material.  An appropriate value of $\xi_{95}$ must be obtained from laboratory test data as well as from cyclic penetration and extraction tests with T-bar or ball. Furthermore, $\delta_{\text {rem }}$  is assumed to be the inverse of the sensitivity of the soil.
 
 The calculation of the cumulative shear strain can be achieved by the eigendeformation technique, departing from Eq.~\eqref{eq_Wp_1}, and considering that, for the calculation of the eigendegradation, that the stress remains constant in a neighborhood $\epsilon$. Thus, Eq.~\eqref{eq_Wp_1} can be simplified as
 
@@ -478,52 +477,52 @@ $$
 Following, the rest of computational tools that were employed in the present research are highlighted. First, the spatial discretization is shown, while the time discretization is mentioned in the final subsection.
 
 \subsection{Spatial discretization}
-The dynamic problem of a dry soil (mono-phase material) is studied in this research, being the time an important issue of the following analyses. The governing equation of the dynamic problem can be defined by the linear momentum balance equation:
+The dynamic problem of a dry soil (mono-phase material) is studied in this research, being the time an important issue of the following analyses. The formulation of the dynamic problem can be defined by the governing equation of the balance of the linear momentum:
 \begin{equation}\label{eq_gov1}
  \mbox{div } \boldsymbol{\sigma}-\rho\boldsymbol{a}+\rho\boldsymbol{g}=\boldsymbol{0}.
 \end{equation}
-The derivation of the weak form of the problem needs the multiplication by the test function $\delta \boldsymbol{u}$, the virtual displacement, and the integration over the domain. After the application of the Green's Theorem, Equation \eqref{eq_gov1} yields:
+The weak form derivation, following Galerkin procedure, needs to multiply~\eqref{eq_gov1} by the virtual displacement (a test function) $\delta \boldsymbol{u}$, and the integration over the domain. After applying the Green's Theorem, Equation \eqref{eq_gov1} reads as follows:
 \begin{eqnarray} \label{eq_gov1_a}
 -\int_\Omega \boldsymbol{ \sigma} \, : \, \mbox{grad} \delta\boldsymbol{u} \,\, \differential{\Omega} + \int_{\Gamma_{t}} \delta\boldsymbol{u} \cdot\boldsymbol{\overline{t}} \, \differential \gamma - \int_\Omega \delta\boldsymbol{u} \cdot  \rho\boldsymbol{a}  \,\, \differential{\Omega} + \int_\Omega \delta\boldsymbol{u} \cdot 
 \rho\boldsymbol{g}  \,\, \differential{\Omega}= 0 
 \end{eqnarray}
-where $\Omega$ represents the volume of the body and $\Gamma$ the boundary where tractions are applied. The first term of the equation is defined as the internal forces, meanwhile the second and forth conform the external forces. The next step is the interpolation through the Optimal Transportation Meshfree~\cite{li2010,li2014,Huang2019}, a meshfree method that has been demonstrated to perform reasonably well in geotechnical problems~\cite{Navas2020,Navas2021}. It is based in the conjunction of material points and nodes. As mentioned before, the shape functions are based on the work of Arroyo and Ortiz~\cite{arroyo2006}, who defined the Local Max-Ent shape function (LME) of the material point $\boldsymbol(x)$ with respect to the neighborhood $\boldsymbol(x_a)$ as follows:
+where $\Omega$ is the volume of the body and the boundary where tractions are applied is depicted by $\Gamma$. The internal forces of the body are represented by the first term of the equation, meanwhile the external forces are represented by the second and fourth terms. The third one refers to the inertial terms. The next step is the interpolation through the Optimal Transportation Meshfree~\cite{li2010,li2014,Huang2019}, a meshfree method that has been demonstrated to perform reasonably well in geotechnical problems~\cite{Navas2020,Navas2021}. This numerical method is based on a calculation framework of nodes and material points. The shape functions are based on the work of Arroyo and Ortiz~\cite{arroyo2006}, where the Local Max-Ent shape function (LME) of the material point $\boldsymbol(x)$ with respect to the neighborhood $\boldsymbol(x_a)$ are defined as follows:
 \begin{equation} \label{eq_N1}
 N_a(\textbf{x})=\frac{\exp\left[ -\beta_{_{LME}} \; |\bf{x-x_a}|^2 +  \boldsymbol{\lambda}^*  \cdot  (x-x_a)  \right] } {Z(\textbf{x},\boldsymbol{\lambda}^*(\textbf{x}))},
 \end{equation}
-where the computation is done along a neighborhood $N_b$ and 
+being $Z({\bf x}, {\boldsymbol{\lambda}})$ computed along a neighborhood $N_b$ as:
 \begin{equation}\label{eq_N2}
 Z({\bf x}, {\boldsymbol{\lambda}}) = \sum_{a=1}^{Nb} \exp \left[ -\beta_{_{LME}} \, |{\bf x-x_a}|^2 + \boldsymbol{\lambda}  \cdot  {\bf(x-x_a)}         \right].
 \end{equation}
-The first derivatives of the shape function can be obtained from the own shape function and its Hessian matrix \textbf{J} by employing the following expression:
+The derivatives of this shape function can be obtained from the Hessian matrix \textbf{J} as follows:
 \begin{eqnarray}
 \nabla N^*_a &=& -N^*_a \,  (\textbf{J}^*)^{-1} \,  (\bf x-x_a) \label{eq_N3} ,
 \end{eqnarray}
-The parameter $\beta_{_{LME}}$ defines the shape of the neighborhood, and it is related with the discretization size (or nodal spacing), $h$,  and the constant, $\gamma_{_{LME}}$, which controls the locality of the shape functions, as follows,
+The value of parameter $\beta_{_{LME}}$ is associated to the shape of the neighborhood as well as the discretization size (or nodal spacing), $h$. Both parameters are related through parameter $\gamma_{_{LME}}$, which controls the locality of the shape functions, as it is observed following:
 \begin{equation}\label{eqLM3}
 \beta=\frac{\gamma_{_{LME}}}{h^2}.
 \end{equation} 
 
-It bears emphasis that $\boldsymbol{\lambda}^*(\bf x)$ comes from the minimization of the function $g(\boldsymbol{\lambda})=\log Z(\bf x, \boldsymbol{\lambda})$ to guarantee the maximum entropy.\\
+It bears pointing out that $\boldsymbol{\lambda}^*(\bf x)$ is obtained through the minimization of the function $g(\boldsymbol{\lambda})=\log Z(\bf x, \boldsymbol{\lambda})$ to guarantee the maximum entropy.\\
 
 By employing the outlined shape functions and applying Galerkin procedure to the weak form, $\boldsymbol{u}$ can be interpolated by employing:
 \begin{equation} \label{eq_uwp1}
 \boldsymbol{u} \approx  \boldsymbol{u}^h = \boldsymbol{N}_u \cdot \tilde{ \boldsymbol{u} }
 \end{equation}
-where $\square^h$ represents the OTM approximation of the field $\square$ and $\tilde{ \square } $ the nodal values.  $\boldsymbol{N}_u = [N_1 \boldsymbol{I}, N_2 \boldsymbol{I}, ..., N_m \boldsymbol{I}]$ represents the shape function and $m$ is the number of nodes. Since the shape functions are defined in the reference configuration and time independent, $\boldsymbol{N} = \boldsymbol{N}(\boldsymbol{X})$, the following property holds:  $\dot{\square}^h =\boldsymbol{N} \cdot \dot{\tilde{\square}}$.
+where $\square^h$ represents the OTM approximation of the field $\square$ and $\tilde{ \square } $ the nodal values.  $\boldsymbol{N}_u = [N_1 \boldsymbol{I}, N_2 \boldsymbol{I}, ..., N_m \boldsymbol{I}]$ is the shape function, being $m$ the number of neighbor nodes. The shape functions are defined in the updated configuration, $\boldsymbol{N} = \boldsymbol{N}(\boldsymbol{x})$. Moreover, the following property helps to calculate time variations:  $\dot{\square}^h =\boldsymbol{N} \cdot \dot{\tilde{\square}}$.
   
   \subsection{Time discretization}
   In this work, an implicit scheme has been proposed, since several applications cover a wide range of loading rates; from slow scenarios to quick phenomena. For the first ones, an explicit scheme would provide long computation time. Thus, the Newmark Implicit Scheme has been employed, with the parameters $\gamma=$0.6 and $\beta=$0.325 that are known to be suitable for dynamic problems~\cite{Kontoe2006}. To construct this scheme, Eq.~\eqref{eq_gov1_a} is reformulated as a system of equations, read as
 \begin{equation}\label{eq_u1}
  \boldsymbol{ R}_{k+1}  +   \boldsymbol{M}   \, \boldsymbol {\ddot{u}}_{k+1}= \boldsymbol{P }_{k+1},
 \end{equation}
-where   $\boldsymbol{R}$ and $  \boldsymbol{ M}$ respectively denote the internal forces vector and mass matrix, whereas $ \boldsymbol{P}$ is the external forces vector, which contains both gravity acceleration and external nodal forces. ${k+1}$ represents the current step. Eq.~(\ref{eq_u1}) can be re-written with the Newmark scheme as:
+where   $\boldsymbol{R}$ and $  \boldsymbol{ M}$  denote the internal forces vector and mass matrix respectively. $\boldsymbol{P}$ holds for the external forces vector, which is composed by both gravity acceleration and external nodal forces as we have seen previously. Eq.~(\ref{eq_u1}) can be re-written with the Newmark scheme as:
 \begin{eqnarray}\label{eq_u2}
 \boldsymbol {G}_{k+1} &=& \boldsymbol {M}\left[\alpha_1\Delta\boldsymbol {u}_{k+1}-\alpha_2\boldsymbol {\dot{u}}_{k}-\alpha_3\boldsymbol {\ddot{u}}_{k}\right] +
 + \boldsymbol {R}_{k+1}-\boldsymbol {P}_{k+1}=\boldsymbol {0},
 \end{eqnarray}
 
-where the $\alpha$-parameters are listed in Table~\ref{tab1} according to Wriggers~\cite{wriggers:08}. These coefficients can be easily extended to any other time integration schemes. 
+where the $\alpha$-parameters are calculated according to Wriggers~\cite{wriggers:08} and are listed in Table~\ref{tab1}. These coefficients can be easily extended to any other time integration schemes. 
 %%%
 \begin{table}
 \caption{\label{tab1} The $\alpha$-parameters of the Newmark scheme.} 
@@ -535,16 +534,16 @@ where the $\alpha$-parameters are listed in Table~\ref{tab1} according to Wrigge
 	\end{tabular}
 \end{table}
 
-Solving the above non-linear equations with a Newton-Raphson method, the resulting iterative scheme, taking into account the matrices that are involved in our problem, can be written as:
+When the above non-linear equations are solved through a Newton-Raphson method, the resulting iterative scheme, taking into account the matrices that are involved in our problem, can be written as:
 \begin{eqnarray}\label{eq_uw32}
 \left[\alpha_1\boldsymbol {M}+\boldsymbol {K}^{i}_{k+1}\right]\Delta\boldsymbol{u}^{i+1}_{k+1} = \left[\boldsymbol {K_{*}}\right]^{i}_{k+1} \Delta\boldsymbol{u}^{i+1}_{k+1} &=& -\boldsymbol {G}(\boldsymbol {u}^{i}_{k+1}), \\
 \mbox{where}\;\; \boldsymbol {u}^{i+1}_{k+1} &=& \boldsymbol {u}^{i}_{k+1} + \Delta \boldsymbol {u}^{i+1}_{k+1}.  \nonumber 
 \end{eqnarray}
-where $\boldsymbol {K}$ is the tangential stiffness matrix:
+where $\boldsymbol {K}$ is the derivative of the internal forces of each iteration $i$, also known as \textit{tangential stiffness matrix}:
 \begin{equation}\label{eq_uw31}
 \boldsymbol {K}(\boldsymbol {u}^{i}_{k+1})=\boldsymbol {K}^{i}_{k+1}=\left.\frac{\partial\boldsymbol {R}}{\partial \boldsymbol {u}}\right|_{\boldsymbol{u}^{i}_{k+1}}.
 \end{equation}
-and $i$ depicts the iteration index. The iteration finishes when  $\boldsymbol {G}^{i}_{k+1}$ is smaller than a given tolerance.
+The iteration procedure finishes when the norm of the residuum $\boldsymbol {G}^{i}_{k+1}$ is below a given tolerance.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Applications}
@@ -600,7 +599,7 @@ Results obtained in this research and the ones obtained by Zhang \textit{et al.}
 
 \subsection{Strip footing load}
 \label{S42}
-Following, the behavior of the soil under different loading rates of a strip footing is analyzed. Similarly, the viscous properties of the soil are varied in order to extend the analysis to the behavior of the soil. This classic problem has been extensively used to verify the solutions provided by numerical models under visco-plastic conditions. The two main features to assess are the mechanism of failure and the behavior of the reaction forces at different visco-plastic scenarios. These results have been previously presented in the work of Pastor and coworkers \cite{BlancPastor2012,Navas2018}, where the loading is applied as an incremental velocity downwards at the base of the strip footing. In the present research, the loading is applied as a negative displacement according to the following expression: $$u_y=u_f\left(t/t_f\right)^2,$$ 
+Following, the behavior of the soil under different loading rates of a strip footing is analyzed. Similarly, the viscous properties of the soil are varied in order to extend the analysis to the behavior of the soil. This classic problem has been extensively used to verify the solutions provided by numerical models under visco-plastic conditions. The two main features to assess are the mechanism of failure and the behavior of the reaction forces at different visco-plastic scenarios. These results have been previously presented in the work of Pastor and coworkers \cite{BlancPastor2012,Navas2018}, where an incremental velocity downwards at the base of the strip footing is applied as the loading condition. In the proposed application, it is applied as a negative displacement according to the following equation: $$u_y=u_f\left(t/t_f\right)^2,$$ 
 where $u_f=0.04$~m. and $t_f=4$~s. The geometry and soil parameters can be seen in Fig.\ref{fig_geozap}. Parameters of the Eigendegradation algorithm are also depicted. Opposite to the previous application, in this case there is no weak layer, acting the whole domain as a visco-plastic degradable soil.
 
 %%%%%
